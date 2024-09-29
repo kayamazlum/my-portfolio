@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 
 export const metadata: Metadata = {
@@ -17,8 +19,10 @@ export default function RootLayout({
       <head>
         <link rel="shortuct icon" href="/tabicon/favicon.ico" />
       </head>
-      <body className={``}>
+      <body className={`p-0 m-0 `}>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
