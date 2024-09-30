@@ -1,19 +1,24 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+// /** @type {import('tailwindcss').Config} */
+// import colors from './src/theme/colors/colors';
+module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+      colors:{
+        customLight:"#FFEED9",
+        customLight2:"#FFDDBF",
+        customBrown:"#403930",
+        customBrown2:"#594F43",
+        customGray:"#4D5566",
+        customWhite:"#F3F2FF",
+        customBlue:"#4E5E80"
+    },
     },
   },
   plugins: [],
-};
-export default config;
+}
