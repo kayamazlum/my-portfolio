@@ -8,8 +8,8 @@ const Navbar = () => {
         <ul className='flex gap-8 font-semibold text-[20px]'>
           <li><Link href={"/"}>Home</Link></li>
           <li><Link href={"/"}>Portfolio</Link></li>
-          <li><Link href={"/"}>Contact</Link></li>
           <li><Link href={"/"}>About</Link></li>
+          <li><Link href={"/"}>Contact</Link></li>
         </ul>
       </div>
     </div>

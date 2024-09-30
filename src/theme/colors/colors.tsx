@@ -1,5 +1,5 @@
 const colors = {
-    customLight:"#FFDDBF",
+    customLight:"#FFEED9",
     customLight2:"#FFDDBF",
     customBrown:"#403930",
     customBrown2:"#594F43",
