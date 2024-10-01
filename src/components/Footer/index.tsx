@@ -1,10 +1,14 @@
 import React from 'react'
+import Wrapper from '../Wrapper'
 
 const Footer = () => {
   return (
-    <div className='items-center justify-center flex max-w-[1366px] mx-auto'>
-      Footer
-    </div>
+    <Wrapper>
+      <div className='items-center justify-center flex '>
+        Footer
+      </div>
+    </Wrapper>
+
   )
 }
 

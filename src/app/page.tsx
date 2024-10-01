@@ -1,9 +1,11 @@
 import Banner from "@/components/Banner";
+import MyRecentWork from "@/components/MyRecentWork";
 
 export default function Home() {
   return (
-    <div className="max-w-[1366px] bg-customLight mx-auto">
+    <div className="bg-customLight mx-auto ">
       <Banner/>
+      <MyRecentWork/>
     </div>
   );
 }
