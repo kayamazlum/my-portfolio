@@ -5,7 +5,7 @@ interface TitleProps {
 }
 
 const SectionTitle: React.FC<TitleProps> = ({ children }) => {
- return <h2 className="text-4xl font-semibold">{children}</h2>;
+ return <h2 className="text-[40px] leading-3 font-semibold">{children}</h2>;
 };
 
 export default SectionTitle;
