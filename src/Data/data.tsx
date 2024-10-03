@@ -9,7 +9,7 @@ const data = [
   id: '2',
   title: 'Honey Bunny',
   content:
-   'A colorful dashboard to manage your fictional projects and team, all in a single place. redesigned the popular language learnin.',
+   'A colorful dashboard to manage your fictional projects and team, all in a single place. redesigned the popular language.',
   imageUrl:
    'https://images.unsplash.com/photo-1724726561649-c94ea9057a20?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
  },
