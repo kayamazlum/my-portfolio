@@ -5,8 +5,8 @@ import SectionTitle from '../SectionTitle';
 
 const About = () => {
   return (
-    <Section className="min-h-[calc(100vh)] py-20 flex bg-customLight items-center">
-      <div className="flex flex-col w-[605px] text-center sm:text-center">
+    <Section className="min-h-[calc(100vh)] py-20 flex bg-customLight ">
+      <div className="flex flex-col w-[605px] text-center sm:text-start ">
         <SectionTitle>A Little Bit About Me</SectionTitle>
         <p className="text-2xl">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae culpa animi doloremque consequatur tempora!

@@ -5,7 +5,7 @@ import Section from '../Section';
 
 const Banner = () => {
   return (
-    <Section className="h-[calc(100vh-64px)] flex bg-customLight items-center">
+    <Section className="h-[calc(100vh-64px)] flex bg-customLight items-center ">
       <div className="flex flex-col w-[605px] gap-6 ">
         <div className="bg-customLight2 rounded-[10px] py-2 px-4 text-xl w-[180px] flex justify-center items-center">
           {' '}
