@@ -1,39 +1,35 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { ImLinkedin } from 'react-icons/im';
-import { IoIosMail } from 'react-icons/io';
 import Section from '../Section';
-import Link from 'next/link';
 import SectionTitle from '../SectionTitle';
+import ContactCard from '../ContactCard';
+import { SiGmail } from 'react-icons/si';
 
 const Contact = () => {
   return (
-    <Section className="bg-customLight2 flex  justify-center items-center h-[550px] xl:h-[400px] bg-[url('/bg.png')] bg-repeat bg-center">
+    <Section className="bg-customLight2 flex  justify-center items-center h-[800px] lg:h-[650px] bg-[url('/bg.png')] bg-repeat bg-center">
       <div className="flex flex-col w-full">
-        <SectionTitle className="text-center">Contact</SectionTitle>
-        <div className="gap-8 flex items-center w-full xl:flex-row flex-col ">
-          <Link
-            href={'mailto:mazlumwork@hotmail.com'}
-            className="rounded-3xl p-4 bg-customWhite bg-opacity-40 flex items-center justify-center text-2xl font-semibold gap-4 w-full h-20 border-black border hover:border-orange-600 transition"
-          >
-            <IoIosMail size={60} /> <span>email@gmail.com</span>
-          </Link>
-          <Link
-            href={'https://www.linkedin.com/in/mazlum-kaya-2076341aa/'}
-            target="_blank"
-            className="rounded-3xl p-4 bg-customWhite bg-opacity-40 flex items-center justify-center text-2xl font-semibold gap-4 w-full h-20 border-black border hover:border-orange-600 transition"
-          >
-            <ImLinkedin size={44} />
-            <span>My LinkedIn Profile</span>
-          </Link>
-          <Link
-            href={'https://github.com/kayamazlum'}
-            target="_blank"
-            className="rounded-3xl p-4 bg-customWhite bg-opacity-40 flex items-center justify-center text-2xl font-semibold gap-4 w-full h-20 border-black border hover:border-orange-600 transition"
-          >
-            <FaGithub size={50} />
-            <span>My Github Profile</span>
-          </Link>
+        <SectionTitle className="text-center text-customBrown">Contact</SectionTitle>
+        <div className="w-full flex lg:flex-row gap-8 flex-col justify-around">
+          <div className="lg:w-[40%] flex p-8 justify-center items-center ">
+            <span className="text-3xl font-medium text-center text-customBrown2">
+              Let’s work together and make everything super cute and super useful.
+            </span>
+          </div>
+          <div className="gap-8 flex justify-center items-center flex-col lg:w-[400px]	">
+            <ContactCard
+              url="mailto:mazlumwork@hotmail.com"
+              text="mazlumwork@hotmail.com"
+              icon={<SiGmail size={24} />}
+            />
+            <ContactCard
+              url="https://www.linkedin.com/in/mazlum-kaya-2076341aa/"
+              text="My LinkedIn Profile"
+              icon={<ImLinkedin size={24} />}
+            />
+            <ContactCard url="https://github.com/kayamazlum" text="My Github Profile" icon={<FaGithub size={30} />} />
+          </div>
         </div>
       </div>
     </Section>

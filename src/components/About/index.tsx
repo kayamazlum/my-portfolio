@@ -2,25 +2,35 @@ import React from 'react';
 import Section from '../Section';
 import Button from '../Button';
 import SectionTitle from '../SectionTitle';
+import Image from 'next/image';
 
 const About = () => {
   return (
-    <Section className="min-h-[calc(100vh)] py-20 flex bg-customLight ">
-      <div className="flex flex-col w-[605px] text-center sm:text-start ">
+    <Section className="min-h-[calc(100vh)] py-20 flex bg-customLight justify-center items-center">
+      <div className=" lg:w-2/5  flex absolute lg:static justify-center items-center mx-auto right-0 left-0 opacity-30 lg:opacity-100">
+        <div className="overflow-hidden rounded-[16px] mx-auto ">
+          <Image
+            src={`/about.png`}
+            alt="sad"
+            priority
+            width={400}
+            height={400}
+            className="rounded-[16px] h-full w-full object-contain"
+          ></Image>
+        </div>
+      </div>
+      <div className="flex flex-col lg:w-3/5 w-full text-center sm:text-start ">
         <SectionTitle>A Little Bit About Me</SectionTitle>
         <p className="text-2xl">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae culpa animi doloremque consequatur tempora!
           Officiis necessitatibus voluptatum distinctio debitis non vel neque totam modi nobis ea ratione suscipit
           iusto, illo labore vitae laborum quas perspiciatis repudiandae atque asperiores. Dolore porro dicta
-          repudiandae, earum aliquid vero quam quis, magni laborum expedita, doloremque esse. Perspiciatis, repellendus
-          consequatur. Neque, aut. Commodi voluptas delectus inventore ullam neque odit reiciendis nihil ducimus quaerat
-          fugit debitis quibusdam sit, vero ipsum assumenda velit repudiandae est esse ratione!
+          repudiandae, earum aliquid vero quam quis, magni laborum expedita, doloremque esse.
         </p>
         <div className="gap-4 flex mt-10 flex-col sm:flex-row md:items-start items-center">
           <Button className={'bg-customLight '} text="Contact Me" />
         </div>
       </div>
-      {/* <div>da</div> */}
     </Section>
   );
 };
