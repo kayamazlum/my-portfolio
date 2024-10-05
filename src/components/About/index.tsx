@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-    <Section className="min-h-[calc(100vh)] py-20 flex bg-customLight justify-center items-center">
+    <Section id="about" className="min-h-[calc(100vh)] py-20 flex bg-customLight justify-center items-center">
       <div className=" lg:w-2/5  flex absolute lg:static justify-center items-center mx-auto right-0 left-0 opacity-30 lg:opacity-100">
         <div className="overflow-hidden rounded-[16px] mx-auto ">
           <Image

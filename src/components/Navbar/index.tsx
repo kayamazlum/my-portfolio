@@ -17,17 +17,17 @@ const Navbar = () => {
     <Section className="justify-start flex items-center h-[64px] border-b bg-customLight border-b-gray-300 w-full z-50">
       <div className=" w-full hidden justify-between md:flex">
         <ul className="flex gap-8 font-semibold text-[20px] ">
-          <li>
+          <li className="hover:text-orange-600 transition duration-500">
             <Link href={'/'}>Home</Link>
           </li>
-          <li>
-            <Link href={'/'}>Portfolio</Link>
+          <li className="hover:text-orange-600 transition duration-500">
+            <Link href={'#portfolio'}>Portfolio</Link>
           </li>
-          <li>
-            <Link href={'/'}>About</Link>
+          <li className="hover:text-orange-600 transition duration-500">
+            <Link href={'#about'}>About</Link>
           </li>
-          <li>
-            <Link href={'/'}>Contact</Link>
+          <li className="hover:text-orange-600 transition duration-500">
+            <Link href={'#contact'}>Contact</Link>
           </li>
         </ul>
       </div>
@@ -41,16 +41,24 @@ const Navbar = () => {
           </div>
           <ul className="flex flex-col gap-8 font-semibold text-3xl items-center justify-center ">
             <li className="">
-              <Link href={'/'}>Home</Link>
+              <Link href={'/'} onClick={() => changeMenu()}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link href={'/'}>Portfolio</Link>
+              <Link href={'#portfolio'} onClick={() => changeMenu()}>
+                Portfolio
+              </Link>
             </li>
             <li>
-              <Link href={'/'}>About</Link>
+              <Link href={'#about'} onClick={() => changeMenu()}>
+                About
+              </Link>
             </li>
             <li>
-              <Link href={'/'}>Contact</Link>
+              <Link href={'#contact'} onClick={() => changeMenu()}>
+                Contact
+              </Link>
             </li>
           </ul>
         </div>

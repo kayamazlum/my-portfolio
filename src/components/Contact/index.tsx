@@ -8,7 +8,10 @@ import { SiGmail } from 'react-icons/si';
 
 const Contact = () => {
   return (
-    <Section className="bg-customLight2 flex  justify-center items-center h-[800px] lg:h-[650px] bg-[url('/bg.png')] bg-repeat bg-center">
+    <Section
+      id="contact"
+      className="bg-customLight2 flex justify-center items-center h-[800px] lg:h-[650px] bg-[url('/bg.png')] bg-repeat bg-center"
+    >
       <div className="flex flex-col w-full">
         <SectionTitle className="text-center text-customBrown">Contact</SectionTitle>
         <div className="w-full flex lg:flex-row gap-8 flex-col justify-around">
