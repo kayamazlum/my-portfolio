@@ -1,6 +1,7 @@
+'use client';
 import React from 'react';
 import Section from '../Section';
-import Link from 'next/link';
+import scrollToSection from '@/helpers';
 
 const Footer = () => {
   return (
@@ -8,17 +9,19 @@ const Footer = () => {
       <div className="flex flex-col w-full justify-center items-center">
         <div className=" w-full items-center flex flex-col justify-center gap-4 h-[200px]">
           <ul className="flex gap-4 font-semibold text-[20px] text-customBrown2 sm:flex-row ">
-            <li className="hover:underline">
-              <Link href={'/'}>Home</Link>
+            <li className="cursor-pointer hover:underline ">
+              <span onClick={() => scrollToSection('top')}>Home</span>
             </li>
-            <li className="hover:underline">
-              <Link href={'#portfolio'}>Portfolio</Link>
+            <li className="cursor-pointer hover:underline ">
+              <span className="" onClick={() => scrollToSection('portfolio')}>
+                Portfolio
+              </span>
             </li>
-            <li className="hover:underline">
-              <Link href={'#about'}>About</Link>
+            <li className="cursor-pointer hover:underline ">
+              <span onClick={() => scrollToSection('about')}>About</span>
             </li>
-            <li className="hover:underline">
-              <Link href={'#contact'}>Contact</Link>
+            <li className="cursor-pointer hover:underline ">
+              <span onClick={() => scrollToSection('contact')}>Contact</span>
             </li>
           </ul>
         </div>

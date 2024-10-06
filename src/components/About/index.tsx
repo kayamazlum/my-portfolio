@@ -1,8 +1,10 @@
+'use client';
 import React from 'react';
 import Section from '../Section';
 import Button from '../Button';
 import SectionTitle from '../SectionTitle';
 import Image from 'next/image';
+import scrollToSection from '@/helpers';
 
 const About = () => {
   return (
@@ -28,7 +30,7 @@ const About = () => {
           repudiandae, earum aliquid vero quam quis, magni laborum expedita, doloremque esse.
         </p>
         <div className="gap-4 flex mt-10 flex-col sm:flex-row md:items-start items-center">
-          <Button className={'bg-customLight '} text="Contact Me" />
+          <Button onClick={() => scrollToSection('contact')} className={'bg-customLight '} text="Contact Me" />
         </div>
       </div>
     </Section>

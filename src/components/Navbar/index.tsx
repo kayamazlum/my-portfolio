@@ -1,33 +1,31 @@
 'use client';
-import Link from 'next/link';
 import React, { useState } from 'react';
 import Section from '../Section';
 import { CgMenuRight } from 'react-icons/cg';
 import { GrClose } from 'react-icons/gr';
+import scrollToSection from '@/helpers';
 
 const Navbar = () => {
   const [hamburger, setHamburger] = useState(false);
-  console.log(hamburger);
-
   const changeMenu = () => {
     setHamburger(!hamburger);
   };
 
   return (
-    <Section className="justify-start flex items-center h-[64px] border-b bg-customLight border-b-gray-300 w-full z-50">
+    <Section className="justify-start flex items-center h-[64px]bg-customLight  w-full z-50">
       <div className=" w-full hidden justify-between md:flex">
         <ul className="flex gap-8 font-semibold text-[20px] ">
-          <li className="hover:text-orange-600 transition duration-500">
-            <Link href={'/'}>Home</Link>
+          <li className="hover:text-customOrange transition duration-500">
+            <button onClick={() => scrollToSection('top')}>Home</button>
           </li>
-          <li className="hover:text-orange-600 transition duration-500">
-            <Link href={'#portfolio'}>Portfolio</Link>
+          <li className="hover:text-customOrange transition duration-500">
+            <button onClick={() => scrollToSection('portfolio')}>Portfolio</button>
           </li>
-          <li className="hover:text-orange-600 transition duration-500">
-            <Link href={'#about'}>About</Link>
+          <li className="hover:text-customOrange transition duration-500">
+            <button onClick={() => scrollToSection('about')}>About</button>
           </li>
-          <li className="hover:text-orange-600 transition duration-500">
-            <Link href={'#contact'}>Contact</Link>
+          <li className="hover:text-customOrange transition duration-500">
+            <button onClick={() => scrollToSection('contact')}>Contact</button>
           </li>
         </ul>
       </div>
@@ -41,24 +39,44 @@ const Navbar = () => {
           </div>
           <ul className="flex flex-col gap-8 font-semibold text-3xl items-center justify-center ">
             <li className="">
-              <Link href={'/'} onClick={() => changeMenu()}>
+              <button
+                onClick={() => {
+                  scrollToSection('top');
+                  changeMenu();
+                }}
+              >
                 Home
-              </Link>
+              </button>
             </li>
             <li>
-              <Link href={'#portfolio'} onClick={() => changeMenu()}>
+              <button
+                onClick={() => {
+                  scrollToSection('portfolio');
+                  changeMenu();
+                }}
+              >
                 Portfolio
-              </Link>
+              </button>
             </li>
             <li>
-              <Link href={'#about'} onClick={() => changeMenu()}>
+              <button
+                onClick={() => {
+                  scrollToSection('about');
+                  changeMenu();
+                }}
+              >
                 About
-              </Link>
+              </button>
             </li>
             <li>
-              <Link href={'#contact'} onClick={() => changeMenu()}>
+              <button
+                onClick={() => {
+                  scrollToSection('contact');
+                  changeMenu();
+                }}
+              >
                 Contact
-              </Link>
+              </button>
             </li>
           </ul>
         </div>
