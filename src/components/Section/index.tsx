@@ -4,13 +4,14 @@ import Wrapper from '../Wrapper';
 interface SectionProps {
   children: ReactNode;
   className?: string;
+  wrapperClassName?: string;
   id?: string;
 }
 
-const Section: React.FC<SectionProps> = ({ children, className, id }) => {
+const Section: React.FC<SectionProps> = ({ children, className, wrapperClassName, id }) => {
   return (
     <div className={className} id={id}>
-      <Wrapper>{children}</Wrapper>
+      <Wrapper className={wrapperClassName}>{children}</Wrapper>
     </div>
   );
 };
