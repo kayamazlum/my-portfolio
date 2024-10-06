@@ -4,11 +4,18 @@ import Section from '../Section';
 import { CgMenuRight } from 'react-icons/cg';
 import { GrClose } from 'react-icons/gr';
 import scrollToSection from '@/helpers';
+import { MdLightMode, MdNightlight } from 'react-icons/md';
 
 const Navbar = () => {
   const [hamburger, setHamburger] = useState(false);
   const changeMenu = () => {
     setHamburger(!hamburger);
+  };
+
+  const [darkMode, setDarkMode] = useState(false);
+  console.log(darkMode);
+  const changeModeHandler = () => {
+    setDarkMode(!darkMode);
   };
 
   return (
@@ -28,6 +35,11 @@ const Navbar = () => {
             <button onClick={() => scrollToSection('contact')}>Contact</button>
           </li>
         </ul>
+        {darkMode ? (
+          <MdLightMode size={30} onClick={() => changeModeHandler()} />
+        ) : (
+          <MdNightlight size={30} onClick={() => changeModeHandler()} />
+        )}
       </div>
       <div className="flex md:hidden justify-end w-full">
         <CgMenuRight size={40} onClick={() => changeMenu()} />
