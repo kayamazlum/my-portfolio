@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import Wrapper from '../Wrapper';
+import Wrapper from '@/components/Wrapper';
 
 interface SectionProps {
   children: ReactNode;

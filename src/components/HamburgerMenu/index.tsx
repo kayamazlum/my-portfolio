@@ -1,7 +1,6 @@
 'use client';
 import scrollToSection from '@/helpers';
 import { GrClose } from 'react-icons/gr';
-import Navbar from '../Navbar';
 
 interface IHamburgerMenue {
   changeMenu: () => void;
@@ -57,5 +56,3 @@ export const HamburgerMenu = ({ changeMenu }: IHamburgerMenue) => {
     </div>
   );
 };
-
-export default Navbar;

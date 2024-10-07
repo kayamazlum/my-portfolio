@@ -1,13 +1,13 @@
 'use client';
 import scrollToSection from '@/helpers';
 import Image from 'next/image';
-import Button from '../Button';
-import Section from '../Section';
-import SquareArrowIcon from '../SquareArrowIcon';
+import Button from '@/components//Button';
+import Section from '@/components/Section';
+import SquareArrowIcon from '@/components//SquareArrowIcon';
 
 const Banner = () => {
   return (
-    <Section id="home" wrapperClassName="----" className="h-[calc(100vh-64px)] flex bg-customLight items-center ">
+    <Section id="home" wrapperClassName="" className="h-[calc(100vh-64px)] flex bg-customLight items-center">
       <div className=" w-full flex h-full justify-between">
         <div className="flex flex-col w-[605px] gap-6 ">
           <div className="bg-customLight2 rounded-[10px] py-2 px-4 text-xl w-[180px] flex justify-center items-center">

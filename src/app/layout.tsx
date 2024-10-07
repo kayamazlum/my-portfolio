@@ -14,11 +14,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr">
+    <html lang="tr" className="light">
       <head>
         <link rel="shortuct icon" href="/favicon.ico" />
       </head>
-      <body className={`p-0 m-0 bg-customLight text-customBrown dark:bg-blue-500 `}>
+      <body className={`p-0 m-0 bg-white text-customBrown dark:bg-black`}>
         <div id="top"></div>
         <Navbar />
         {children}
