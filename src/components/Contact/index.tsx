@@ -10,13 +10,13 @@ const Contact = () => {
   return (
     <Section
       id="contact"
-      className="bg-customLight2 flex justify-center items-center h-[800px] lg:h-[650px] bg-[url('/bg.png')] bg-repeat bg-center"
+      className="bg-customLight2 dark:bg-customDLight2 flex justify-center items-center h-[800px] lg:h-[650px] bg-none bg-repeat bg-center"
     >
       <div className="flex flex-col w-full">
-        <SectionTitle className="text-center text-customBrown">Contact</SectionTitle>
+        <SectionTitle className="text-center text-customBrown dark:text-customDWhite2">Contact</SectionTitle>
         <div className="w-full flex lg:flex-row gap-8 flex-col justify-around">
           <div className="lg:w-[40%] flex p-8 justify-center items-center ">
-            <span className="text-3xl font-medium text-center text-customBrown2">
+            <span className="text-3xl font-medium text-center text-customBrown2 dark:text-customDWhite2">
               Let’s work together and make everything super cute and super useful.
             </span>
           </div>

@@ -7,12 +7,16 @@ import SquareArrowIcon from '@/components//SquareArrowIcon';
 
 const Banner = () => {
   return (
-    <Section id="home" wrapperClassName="" className="h-[calc(100vh-64px)] flex bg-customLight items-center">
+    <Section
+      id="home"
+      wrapperClassName=""
+      className="h-[calc(100vh-64px)] flex bg-customLight items-center dark:bg-customDLight dark:text-customDWhite"
+    >
       <div className=" w-full flex h-full justify-between">
         <div className="flex flex-col w-[605px] gap-6 ">
-          <div className="bg-customLight2 rounded-[10px] py-2 px-4 text-xl w-[180px] flex justify-center items-center">
+          <div className="bg-customLight2 rounded-[10px] py-2 px-4 text-xl w-[180px] flex justify-center items-center dark:bg-customDLight2">
             {' '}
-            <span className="text-2xl m-0 p-0">👋</span>Hello All
+            <span className="text-2xl m-0 p-0 ">👋</span>Hello All
           </div>
           <div className="text-[3rem] sm:text-[4rem] leading-tight font-semibold ">
             I’m Salman Khan,
@@ -22,10 +26,14 @@ const Banner = () => {
             <Button
               onClick={() => scrollToSection('portfolio')}
               rightIcon={<SquareArrowIcon />}
-              className={'bg-customBlue text-customWhite '}
+              className={'bg-customBlue text-customWhite dark:bg-customDLight2'}
               text="View My Work"
             />
-            <Button onClick={() => scrollToSection('contact')} className={'bg-customLight '} text="Contact Me" />
+            <Button
+              onClick={() => scrollToSection('contact')}
+              className={'bg-customLight dark:bg-customDLight'}
+              text="Contact Me"
+            />
           </div>
         </div>
         <div className=" xl:flex hidden">

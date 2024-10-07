@@ -9,7 +9,7 @@ const Navbar = () => {
   const { HamburgerMenuRender, HamburtMenuTrigger } = useHamburger();
 
   //dark mode
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   console.log(darkMode);
   // Tarayıcıda localStorage'dan temayı oku
   useEffect(() => {
@@ -36,26 +36,34 @@ const Navbar = () => {
   };
 
   return (
-    <Section className="justify-start flex items-center h-[64px] bg-white w-full z-50 dark:bg-blue-700">
+    <Section className="justify-start flex items-center h-[64px] bg-customLight w-full z-50 dark:bg-customDLight dark:text-customDWhite">
       <div className=" w-full hidden justify-between md:flex">
         <ul className="flex gap-8 font-semibold text-[20px] ">
-          <li className="hover:text-customOrange transition duration-500">
+          <li className="hover:text-customDOrange transition duration-500">
             <button onClick={() => scrollToSection('top')}>Home</button>
           </li>
-          <li className="hover:text-customOrange transition duration-500">
+          <li className="hover:text-customDOrange transition duration-500">
             <button onClick={() => scrollToSection('portfolio')}>Portfolio</button>
           </li>
-          <li className="hover:text-customOrange transition duration-500">
+          <li className="hover:text-customDOrange transition duration-500">
             <button onClick={() => scrollToSection('about')}>About</button>
           </li>
-          <li className="hover:text-customOrange transition duration-500">
+          <li className="hover:text-customDOrange transition duration-500">
             <button onClick={() => scrollToSection('contact')}>Contact</button>
           </li>
         </ul>
         {darkMode ? (
-          <MdLightMode size={30} onClick={() => darkModeHandler()} />
+          <MdLightMode
+            className="cursor-pointer hover:text-customDOrange transition duration-500"
+            size={30}
+            onClick={() => darkModeHandler()}
+          />
         ) : (
-          <MdNightlight size={30} onClick={() => darkModeHandler()} />
+          <MdNightlight
+            className="cursor-pointer hover:text-customDLight2 transition duration-500"
+            size={30}
+            onClick={() => darkModeHandler()}
+          />
         )}
       </div>
       <div className="flex md:hidden justify-end w-full">
