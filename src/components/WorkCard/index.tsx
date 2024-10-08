@@ -28,7 +28,7 @@ const WorkCard = () => {
             <p className="text-xl  text-customBrown2 dark:text-customDWhite2 line-clamp-4">{post.content}</p>
           </div>
           <div className="flex justify-between mt-6 items-center">
-            <Link href={''}>
+            <Link href={'/'}>
               <span className="text-lg font-medium text-customBlue dark:text-customDBrown hover:text-customDOrange transition duration-500">
                 View Case Study
               </span>
