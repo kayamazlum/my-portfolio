@@ -19,8 +19,8 @@ const Banner = () => {
             <span className="text-2xl m-0 p-0 ">👋</span>Hello All
           </div>
           <div className="text-[3rem] sm:text-[4rem] leading-tight font-semibold ">
-            I’m Mazlum ,
-            <br /> A Creative Designer and Storyteller
+            I’m Mazlum,
+            <br />A creative Web designer and developer
           </div>
           <div className="gap-4 flex mt-10 flex-col sm:flex-row md:items-start items-center">
             <Button

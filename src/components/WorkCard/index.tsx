@@ -29,7 +29,7 @@ const WorkCard = () => {
           </div>
           <div className="flex justify-between mt-6 items-center">
             <Link href={''}>
-              <span className="text-xl font-medium text-customBlue dark:text-customDBrown hover:text-customDOrange transition duration-500">
+              <span className="text-lg font-medium text-customBlue dark:text-customDBrown hover:text-customDOrange transition duration-500">
                 View Case Study
               </span>
             </Link>

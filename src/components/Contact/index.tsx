@@ -15,9 +15,9 @@ const Contact = () => {
       <div className="flex flex-col w-full ">
         <SectionTitle className="text-center text-customBrown dark:text-customDWhite2">Contact</SectionTitle>
         <div className="w-full flex lg:flex-row gap-8 flex-col justify-around">
-          <div className="lg:w-[40%] flex p-8 justify-center items-center ">
-            <span className="text-3xl font-medium text-center text-customBrown2 dark:text-customDWhite2">
-              Let’s work together and make everything super cute and super useful.
+          <div className="lg:w-[40%] flex p-4 justify-center items-center ">
+            <span className="text-2xl font-medium text-center text-customBrown2 dark:text-customDWhite2">
+              Projelerinizi gerçeğe dönüştürmek ve işbirliği sağlamak için benimle şimdi iletişime geçebilirsiniz.
             </span>
           </div>
           <div className="gap-8 flex justify-center items-center flex-col lg:w-[400px]	">
@@ -28,10 +28,10 @@ const Contact = () => {
             />
             <ContactCard
               url="https://www.linkedin.com/in/mazlum-kaya-2076341aa/"
-              text="My LinkedIn Profile"
+              text="LinkedIn"
               icon={<ImLinkedin size={24} />}
             />
-            <ContactCard url="https://github.com/kayamazlum" text="My Github Profile" icon={<FaGithub size={30} />} />
+            <ContactCard url="https://github.com/kayamazlum" text="Github" icon={<FaGithub size={30} />} />
           </div>
         </div>
       </div>

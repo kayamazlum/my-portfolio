@@ -9,7 +9,7 @@ const Navbar = () => {
   const { HamburgerMenuRender, HamburtMenuTrigger } = useHamburger();
 
   // Dark mode
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   // Menü görünürlüğü için state
   const [showNavbar, setShowNavbar] = useState(true);
