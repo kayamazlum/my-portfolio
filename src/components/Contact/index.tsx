@@ -22,8 +22,8 @@ const Contact = () => {
           </div>
           <div className="gap-8 flex justify-center items-center flex-col lg:w-[400px]	">
             <ContactCard
-              url="mailto:mazlumwork@hotmail.com"
-              text="mazlumwork@hotmail.com"
+              url="mailto:mazlum_work@hotmail.com"
+              text="mazlum_work@hotmail.com"
               icon={<SiGmail size={24} />}
             />
             <ContactCard

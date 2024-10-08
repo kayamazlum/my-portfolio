@@ -19,7 +19,7 @@ const Banner = () => {
             <span className="text-2xl m-0 p-0 ">👋</span>Hello All
           </div>
           <div className="text-[3rem] sm:text-[4rem] leading-tight font-semibold ">
-            I’m Salman Khan,
+            I’m Mazlum Kaya,
             <br /> A Creative Designer and Storyteller
           </div>
           <div className="gap-4 flex mt-10 flex-col sm:flex-row md:items-start items-center">
