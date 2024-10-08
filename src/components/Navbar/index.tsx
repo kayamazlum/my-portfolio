@@ -8,10 +8,16 @@ import Section from '@/components/Section';
 const Navbar = () => {
   const { HamburgerMenuRender, HamburtMenuTrigger } = useHamburger();
 
-  //dark mode
+  // Dark mode
   const [darkMode, setDarkMode] = useState(true);
-  console.log(darkMode);
-  // Tarayıcıda localStorage'dan temayı oku
+
+  // Menü görünürlüğü için state
+  const [showNavbar, setShowNavbar] = useState(true);
+
+  // Kaydırma yönünü kontrol etmek için önceki scroll pozisyonunu tutarız
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  // Sayfa yüklendiğinde kaydedilen temayı kullan
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
@@ -19,6 +25,7 @@ const Navbar = () => {
     }
   }, []);
 
+  // Tema değiştirme efekti
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark');
@@ -31,12 +38,33 @@ const Navbar = () => {
     }
   }, [darkMode]);
 
-  // const darkModeHandler = () => {
-  //   setDarkMode(!darkMode);
-  // };
+  // Scroll event'i ile menüyü gizle/göster
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        // Sayfa aşağı kaydırılıyor, menüyü gizle
+        setShowNavbar(false);
+      } else {
+        // Sayfa yukarı kaydırılıyor, menüyü göster
+        setShowNavbar(true);
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Temizlik işlemi
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
 
   return (
-    <Section className="justify-start flex items-center h-[64px] bg-customLight w-full z-50 dark:bg-customDLight dark:text-customDWhite">
+    <Section
+      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-500 ${
+        showNavbar ? 'translate-y-0' : '-translate-y-full'
+      } bg-customLight dark:bg-customDLight dark:text-customDWhite flex items-center h-[64px]`}
+    >
       <div className=" w-full hidden justify-between md:flex">
         <ul className="flex gap-8 font-semibold text-[20px] ">
           <li className="hover:text-customDOrange transition duration-500">
