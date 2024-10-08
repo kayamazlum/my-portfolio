@@ -14,7 +14,7 @@ const Banner = () => {
     >
       <div className=" w-full flex h-full justify-between">
         <div className="flex flex-col w-[605px] gap-6 ">
-          <div className="bg-customLight2 rounded-[10px] py-2 px-4 text-xl w-[180px] flex justify-center items-center dark:bg-customDLight2">
+          <div className="bg-customLight2 rounded-[10px] py-2 px-4 text-xl w-[180px] flex justify-center items-center dark:bg-customDBrown">
             {' '}
             <span className="text-2xl m-0 p-0 ">👋</span>Hello All
           </div>

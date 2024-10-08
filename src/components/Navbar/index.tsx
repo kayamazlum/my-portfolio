@@ -31,9 +31,9 @@ const Navbar = () => {
     }
   }, [darkMode]);
 
-  const darkModeHandler = () => {
-    setDarkMode(!darkMode);
-  };
+  // const darkModeHandler = () => {
+  //   setDarkMode(!darkMode);
+  // };
 
   return (
     <Section className="justify-start flex items-center h-[64px] bg-customLight w-full z-50 dark:bg-customDLight dark:text-customDWhite">
@@ -56,13 +56,13 @@ const Navbar = () => {
           <MdLightMode
             className="cursor-pointer hover:text-customDOrange transition duration-500"
             size={30}
-            onClick={() => darkModeHandler()}
+            onClick={() => setDarkMode(!darkMode)}
           />
         ) : (
           <MdNightlight
             className="cursor-pointer hover:text-customDLight2 transition duration-500"
             size={30}
-            onClick={() => darkModeHandler()}
+            onClick={() => setDarkMode(!darkMode)}
           />
         )}
       </div>

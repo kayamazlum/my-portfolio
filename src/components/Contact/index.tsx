@@ -10,9 +10,9 @@ const Contact = () => {
   return (
     <Section
       id="contact"
-      className="bg-customLight2 dark:bg-customDLight2 flex justify-center items-center h-[800px] lg:h-[650px] bg-none bg-repeat bg-center"
+      className="bg-customLight2 dark:bg-customDLight2 flex justify-center items-center h-[800px] lg:h-[650px] bg-[url('/bg.png')] dark:bg-[url('/bg2.png')] bg-cover bg-center"
     >
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full ">
         <SectionTitle className="text-center text-customBrown dark:text-customDWhite2">Contact</SectionTitle>
         <div className="w-full flex lg:flex-row gap-8 flex-col justify-around">
           <div className="lg:w-[40%] flex p-8 justify-center items-center ">
