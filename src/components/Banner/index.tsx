@@ -10,17 +10,18 @@ const Banner = () => {
     <Section
       id="home"
       wrapperClassName=""
-      className="h-[calc(100vh-64px)] mt-[64px] flex bg-customLight items-center dark:bg-customDLight dark:text-customDWhite"
+      className="h-[calc(100vh-64px)] mt-[64px] flex bg-customLight items-center bg-gradient-to-t dark:from-customDLight2 dark:to-customDLight dark:text-customDWhite"
     >
       <div className=" w-full flex h-full justify-between">
         <div className="flex flex-col w-[605px] gap-6 ">
           <div className="bg-customLight2 rounded-[10px] py-2 px-4 text-xl w-[180px] flex justify-center items-center dark:bg-customDBrown">
             {' '}
-            <span className="text-2xl m-0 p-0 ">👋</span>Hello All
+            <span className="text-2xl m-0 p-0 ">👋</span>Selamlar
           </div>
-          <div className="text-[3rem] sm:text-[4rem] leading-tight font-semibold ">
-            I’m Mazlum,
-            <br />A creative Web designer and developer
+          <div className="text-[2.5rem] sm:text-[3.5rem] leading-tight font-semibold ">
+            Ben Mazlum, İhtiyaçlarınıza Uygun,
+            <br />
+            Hızlı ve Etkileyici Web Çözümleri Geliştirebilirim.
           </div>
           <div className="gap-4 flex mt-10 flex-col sm:flex-row md:items-start items-center">
             <Button

@@ -30,7 +30,7 @@ const About = () => {
           Ben Mazlum Kaya, Türkiye’de yaşıyorum. Kullanıcı deneyimini ön planda tutan, modern ve işlevsel web siteleri
           geliştiriyorum.
         </p>
-        <div className="gap-3 w-full flex flex-wrap mt-4">
+        <div className="gap-3 w-full flex flex-wrap mt-8">
           <span className="px-2 bg-customLight2 dark:bg-customDBrown rounded-xl cursor-pointer">HTML</span>
           <span className="px-2 bg-customLight2 dark:bg-customDBrown rounded-xl cursor-pointer">CSS</span>
           <span className="px-2 bg-customLight2 dark:bg-customDBrown rounded-xl cursor-pointer">JavaScript</span>
