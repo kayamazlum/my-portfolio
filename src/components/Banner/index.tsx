@@ -10,7 +10,7 @@ const Banner = () => {
     <Section
       id="home"
       wrapperClassName=""
-      className="h-[calc(100vh)] flex bg-customLight items-center dark:bg-customDLight dark:text-customDWhite"
+      className="h-[calc(100vh-64px)] mt-[64px] flex bg-customLight items-center dark:bg-customDLight dark:text-customDWhite"
     >
       <div className=" w-full flex h-full justify-between">
         <div className="flex flex-col w-[605px] gap-6 ">
@@ -27,12 +27,12 @@ const Banner = () => {
               onClick={() => scrollToSection('portfolio')}
               rightIcon={<SquareArrowIcon />}
               className={'bg-customBlue text-customWhite dark:bg-customDLight2'}
-              text="View My Work"
+              text="Projeler"
             />
             <Button
               onClick={() => scrollToSection('contact')}
               className={'bg-customLight dark:bg-customDLight'}
-              text="Contact Me"
+              text="İletişime Geç"
             />
           </div>
         </div>

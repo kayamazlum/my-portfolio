@@ -11,7 +11,7 @@ const WorkCard = () => {
           key={post.id}
           className="flex flex-col bg-customWhite dark:bg-customDLight xl:max-w-[380px] 2xl:w-[90%] xl:w-[85%] lg:w-[90%]  md:w-[98%]  sm:w-[90%] w-[90%] p-5 rounded-[16px] gap-5 justify-between"
         >
-          <Link href={'#'} className="w-full max-h-[200px]  overflow-hidden rounded-[16px]">
+          <Link href={'#'} className="w-full max-h-[200px] overflow-hidden rounded-[16px]">
             <Image
               src={`${post.imageUrl}`}
               alt="sad"
@@ -33,7 +33,7 @@ const WorkCard = () => {
                 View Case Study
               </span>
             </Link>
-            <span className="dark:text-customDWhite2">02/10/2024</span>
+            <span className="dark:text-customDWhite2 text-sm">02/10/2024</span>
           </div>
         </div>
       ))}

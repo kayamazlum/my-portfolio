@@ -42,7 +42,7 @@ const About = () => {
           <Button
             onClick={() => scrollToSection('contact')}
             className={'bg-customLight dark:bg-customDLight2 dark:text-customDWhite2'}
-            text="Contact Me"
+            text="İletişime Geç"
           />
         </div>
       </div>
