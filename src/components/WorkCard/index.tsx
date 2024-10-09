@@ -27,13 +27,16 @@ const WorkCard = () => {
             </h3>
             <p className="text-xl  text-customBrown2 dark:text-customDWhite2 line-clamp-4">{post.content}</p>
           </div>
-          <div className="flex justify-between mt-6 items-center">
-            <Link href={'#'}>
-              <span className="text-lg font-medium text-customBlue dark:text-customDBrown hover:text-customDOrange transition duration-500">
-                View Case Study
-              </span>
+          <div className="flex gap-2 mt-6 items-center text-lg font-medium text-center text-white">
+            <Link
+              href={'#'}
+              className="rounded-xl px-2 w-20 transition duration-500 hover:scale-105 bg-customDOrange text-black"
+            >
+              Web
             </Link>
-            <span className="dark:text-customDWhite2 text-sm">02/10/2024</span>
+            <Link href={'#'} className="rounded-xl px-2 w-20 transition duration-500 hover:scale-105 bg-customDLight2">
+              Github
+            </Link>
           </div>
         </div>
       ))}
