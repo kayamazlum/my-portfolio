@@ -5,6 +5,7 @@ import { MdLightMode, MdNightlight } from 'react-icons/md';
 import Section from '@/components/Section';
 import { CgMenuRight } from 'react-icons/cg';
 import HamburgerMenu from '../HamburgerMenu';
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -31,6 +32,7 @@ const Navbar = () => {
     }
   }, [darkMode]);
 
+  const router = useRouter();
   return (
     <Section
       className={`fixed top-0 left-0 w-full z-50 transition-transform duration-500 bg-customLight dark:bg-customDLight dark:text-customDWhite flex items-center h-[64px] `}
@@ -38,7 +40,7 @@ const Navbar = () => {
       <div className=" w-full hidden justify-between md:flex">
         <ul className="flex gap-8 font-semibold text-[20px] ">
           <li className="hover:text-customDOrange transition duration-500">
-            <button onClick={() => scrollToSection('top')}>Anasayfa</button>
+            <button onClick={() => router.push('/')}>Anasayfa</button>
           </li>
           <li className="hover:text-customDOrange transition duration-500">
             <button onClick={() => scrollToSection('portfolio')}>Projeler</button>

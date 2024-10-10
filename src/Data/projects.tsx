@@ -1,4 +1,4 @@
-const data = [
+const Skills = [
   {
     id: '1',
     title: 'Shepify States',
@@ -22,4 +22,4 @@ const data = [
   },
 ];
 
-export default data;
+export default Skills;

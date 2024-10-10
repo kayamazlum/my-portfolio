@@ -1,4 +1,6 @@
+'use client';
 import scrollToSection from '@/helpers';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 import { GrClose } from 'react-icons/gr';
 import { MdLightMode, MdNightlight } from 'react-icons/md';
@@ -9,8 +11,9 @@ interface hamburgerProps {
   darkMode: boolean;
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
 }
-
 const HamburgerMenu: React.FC<hamburgerProps> = ({ hamburger, setHamburger, darkMode, setDarkMode }) => {
+  const router = useRouter();
+
   return (
     <div>
       <div className="fixed h-screen w-screen left-0 top-0 bg-customLight2 z-50 justify-center flex flex-col bg-gradient-to-r from-customLight2 to-customWhite dark:from-customDLight dark:to-customDLight2">
@@ -21,7 +24,7 @@ const HamburgerMenu: React.FC<hamburgerProps> = ({ hamburger, setHamburger, dark
           <li className="">
             <button
               onClick={() => {
-                scrollToSection('top');
+                router.push('/');
                 setHamburger(!hamburger);
               }}
             >

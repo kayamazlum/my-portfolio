@@ -1,4 +1,4 @@
-import data from '@/Data/data';
+import projects from '@/Data/projects';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -6,7 +6,7 @@ import React from 'react';
 const WorkCard = () => {
   return (
     <>
-      {data.map((post) => (
+      {projects.map((post) => (
         <div
           key={post.id}
           className="flex flex-col bg-customWhite dark:bg-customDLight xl:max-w-[380px] 2xl:w-[90%] xl:w-[85%] lg:w-[90%]  md:w-[98%]  sm:w-[90%] w-[90%] p-5 rounded-[16px] gap-5 justify-between"

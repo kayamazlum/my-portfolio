@@ -5,6 +5,7 @@ import Section from '../Section';
 import SectionTitle from '../SectionTitle';
 import ContactCard from '../ContactCard';
 import { SiGmail } from 'react-icons/si';
+import { CgFileDocument } from 'react-icons/cg';
 
 const Contact = () => {
   return (
@@ -32,6 +33,7 @@ const Contact = () => {
               icon={<ImLinkedin size={24} />}
             />
             <ContactCard url="https://github.com/kayamazlum" text="Github" icon={<FaGithub size={30} />} />
+            <ContactCard url="/document/cv.pdf" text="CV" icon={<CgFileDocument size={34} />} />
           </div>
         </div>
       </div>
