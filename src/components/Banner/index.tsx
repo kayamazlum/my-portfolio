@@ -21,7 +21,7 @@ const Banner = () => {
           <div className="text-[2.5rem] sm:text-[3.5rem] leading-tight font-semibold ">
             Ben Mazlum, İhtiyaçlarınıza Uygun,
             <br />
-            Hızlı ve Etkileyici Web Çözümleri Geliştirebilirim.
+            Hızlı ve Etkileyici Web Siteleri Geliştirebilirim.
           </div>
           <div className="gap-4 flex mt-10 flex-col sm:flex-row md:items-start items-center">
             <Button
