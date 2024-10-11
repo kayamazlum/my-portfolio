@@ -15,14 +15,14 @@ const About = () => {
       className="min-h-[calc(100vh)] py-20 flex bg-customLight dark:bg-customDLight justify-center items-center"
     >
       <div className=" lg:w-2/5  flex absolute lg:static justify-center items-center mx-auto right-0 left-0 opacity-30 lg:opacity-100">
-        <div className="overflow-hidden rounded-[16px] mx-auto ">
+        <div className="overflow-hidden rounded-[16px] mx-auto h-auto w-[700px]">
           <Image
             src={`/about.png`}
             alt="sad"
             priority
             width={400}
             height={400}
-            className="rounded-[16px] h-full w-full object-contain"
+            className="rounded-[16px] max-h-[400px] max-w-{400px} object-contain"
           ></Image>
         </div>
       </div>
