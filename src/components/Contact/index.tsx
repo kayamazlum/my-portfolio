@@ -22,11 +22,7 @@ const Contact = () => {
             </span>
           </div>
           <div className="gap-8 flex justify-center items-center flex-col lg:w-[400px]	">
-            <ContactCard
-              url="mailto:mazlum_work@hotmail.com"
-              text="mazlum_work@hotmail.com"
-              icon={<SiGmail size={24} />}
-            />
+            <ContactCard url="mailto:mazlum9kaya@gmail.com" text="mazlum9kaya@gmail.com" icon={<SiGmail size={24} />} />
             <ContactCard
               url="https://www.linkedin.com/in/mazlum-kaya-2076341aa/"
               text="LinkedIn"
