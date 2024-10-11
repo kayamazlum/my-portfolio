@@ -2,6 +2,8 @@ import projects from '@/Data/projects';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { FaExternalLinkAlt } from 'react-icons/fa';
+import { IoIosArrowForward } from 'react-icons/io';
 
 const WorkCard = () => {
   return (
@@ -9,16 +11,26 @@ const WorkCard = () => {
       {projects.map((post) => (
         <div
           key={post.id}
-          className="flex flex-col bg-customWhite dark:bg-customDLight xl:max-w-[380px] 2xl:w-[90%] xl:w-[85%] lg:w-[90%]  md:w-[98%]  sm:w-[90%] w-[90%] p-5 rounded-[16px] gap-5 justify-between"
+          className="flex flex-col bg-customWhite dark:bg-customDLight xl:max-w-[380px] 2xl:w-[90%] xl:w-[85%] lg:w-[90%]  md:w-[98%]  sm:w-[90%] w-[90%] p-3 rounded-[16px] gap-5 justify-between"
         >
-          <Link href={'#'} className="w-full max-h-[200px] overflow-hidden rounded-[16px]">
+          <Link href={'#'} className="w-full max-h-[200px] overflow-hidden rounded-[16px] relative group">
+            <div className="absolute w-full h-full bg-black opacity-0 z-10 group-hover:opacity-85 transition duration-700 ">
+              <Link
+                className="h-full w-full flex items-center justify-center text-white text-xl font-medium"
+                href={'/'}
+              >
+                <span className="flex p-3 justify-center items-center gap-2 border-e border-s border-white rounded-[16px]">
+                  Siteye Git <FaExternalLinkAlt size={16} className="opacity-90" />
+                </span>
+              </Link>
+            </div>
             <Image
               src={`${post.imageUrl}`}
               alt="sad"
               priority
               width={400}
               height={208}
-              className="rounded-[16px] h-full w-full object-cover  transition-all duration-500 hover:scale-110"
+              className="rounded-[16px] h-full w-full object-cover "
             ></Image>
           </Link>
           <div className="h-[160px]">
@@ -27,15 +39,12 @@ const WorkCard = () => {
             </h3>
             <p className="text-xl  text-customBrown2 dark:text-customDWhite2 line-clamp-4">{post.content}</p>
           </div>
-          <div className="flex gap-2 mt-6 items-center text-lg font-medium text-center text-white">
+          <div className="flex gap-2 mt-6 items-center justify-end text-lg text-center text-white">
             <Link
               href={'#'}
-              className="rounded-xl px-2 w-20 transition duration-500 hover:scale-105 bg-customDOrange text-black"
+              className="rounded-lg px-2 dark:border-customDWhite border-customDLight border h-8 flex items-center justify-center w-28 text-customBrown group dark:text-customWhite "
             >
-              Web
-            </Link>
-            <Link href={'#'} className="rounded-xl px-2 w-20 transition duration-500 hover:scale-105 bg-customDLight2">
-              Github
+              Detaylar <IoIosArrowForward className="group-hover:translate-x-2 transition duration-500" size={18} />
             </Link>
           </div>
         </div>

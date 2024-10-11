@@ -16,7 +16,11 @@ const HamburgerMenu: React.FC<hamburgerProps> = ({ hamburger, setHamburger, dark
 
   return (
     <div>
-      <div className="fixed h-screen w-screen left-0 top-0 bg-customLight2 z-50 justify-center flex flex-col bg-gradient-to-r from-customLight2 to-customWhite dark:from-customDLight dark:to-customDLight2">
+      <div
+        className={`fixed h-screen w-screen left-0 top-0 bg-customLight2 z-50 justify-center flex flex-col bg-gradient-to-r from-customLight2 to-customWhite dark:from-customDLight dark:to-customDLight2 duration-500 transition-all transform ease-out ${
+          hamburger ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
         <div className="justify-center absolute top-8 right-8">
           <GrClose size={32} onClick={() => setHamburger(!hamburger)} />
         </div>
