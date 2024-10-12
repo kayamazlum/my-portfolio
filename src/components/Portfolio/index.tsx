@@ -11,6 +11,7 @@ const Portfolio = () => {
         <div className="grid gap-y-14 grid-cols-1 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 md:gap-x-2 justify-items-center mt-20">
           <WorkCard />
         </div>
+        <div className="mt-10">Daha fazla</div>
       </div>
     </Section>
   );
