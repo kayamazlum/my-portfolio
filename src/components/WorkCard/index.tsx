@@ -39,7 +39,7 @@ const WorkCard = () => {
             <h3 className="font-semibold text-2xl my-4 text-customBrown dark:text-customDWhite2 line-clamp-1">
               {post.title}
             </h3>
-            <p className="text-xl  text-customBrown2 dark:text-customDWhite2 line-clamp-4">{post.content}</p>
+            <p className="text-xl text-customBrown2 dark:text-customDWhite2 line-clamp-4">{post.content}</p>
           </div>
           <div className="flex gap-2 mt-6 items-center justify-end text-lg text-center text-white">
             <Link
