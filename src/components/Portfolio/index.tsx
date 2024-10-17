@@ -13,7 +13,7 @@ const Portfolio = () => {
           <WorkCard />
         </div>
         <div className="flex justify-center items-center mt-12">
-          <DetailsButton href="#" className="h-10 w-52 font-semibold" text="Daha Fazla" />
+          <DetailsButton href="#" className="h-14 w-52 font-semibold" text="Daha Fazla" />
         </div>
       </div>
     </Section>
