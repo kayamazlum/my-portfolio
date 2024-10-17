@@ -28,7 +28,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="flex items-center justify-center">
-          <span className="text-sm font-light ">Copyright 2024. All rights Reserved.</span>
+          <span className="text-sm font-light ">2024 | Tüm hakları saklıdır.</span>
         </div>
       </div>
     </Section>

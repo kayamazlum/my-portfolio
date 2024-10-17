@@ -25,7 +25,7 @@ export default function RootLayout({
       <head>
         <link rel="shortuct icon" href="/favicon.ico" />
       </head>
-      <body className={`p-0 m-0 bg-white text-customBrown dark:bg-black`}>
+      <body className={`p-0 m-0 bg-white text-customBrown dark:bg-black `}>
         <div id="top"></div>
         <Navbar />
         {children}

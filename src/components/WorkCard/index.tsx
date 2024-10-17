@@ -3,8 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
-import { IoIosArrowForward } from 'react-icons/io';
 import { MdArrowOutward } from 'react-icons/md';
+import DetailsButton from '../DetailsButton';
 
 const WorkCard = () => {
   return (
@@ -12,7 +12,7 @@ const WorkCard = () => {
       {projects.map((post) => (
         <div
           key={post.id}
-          className="flex flex-col bg-customWhite dark:bg-customDLight xl:max-w-[380px] 2xl:w-[90%] xl:w-[85%] lg:w-[90%]  md:w-[98%]  sm:w-[90%] w-[90%] p-3 rounded-[16px] gap-5 justify-between"
+          className="flex flex-col bg-customWhite dark:bg-customDLight xl:max-w-[380px] 2xl:w-[90%] xl:w-[85%] lg:w-[90%] md:w-[98%] sm:w-[90%] w-full p-4 rounded-[16px] justify-between "
         >
           <div className="w-full max-h-[200px] overflow-hidden rounded-[16px] relative group">
             <div className="absolute w-full h-full bg-black opacity-0 z-10 group-hover:opacity-85 transition duration-700 ">
@@ -26,28 +26,25 @@ const WorkCard = () => {
               src={`${post.imageUrl}`}
               alt="sad"
               priority
-              width={400}
-              height={208}
+              width={600}
+              height={300}
               className="rounded-[16px] h-full w-[full] object-cover "
             ></Image>
             <FaExternalLinkAlt
-              className="absolute z-20 right-2 top-2 bg-black text-white bg-opacity-30 p-1 rounded-lg"
+              className="absolute z-20 right-2 top-2 bg-black text-white bg-opacity-30 p-1 rounded-lg cursor-pointer"
               size={24}
             />
           </div>
-          <div className="h-[160px]">
-            <h3 className="font-semibold text-2xl my-4 text-customBrown dark:text-customDWhite2 line-clamp-1">
-              {post.title}
-            </h3>
-            <p className="text-xl text-customBrown2 dark:text-customDWhite2 line-clamp-4">{post.content}</p>
-          </div>
-          <div className="flex gap-2 mt-6 items-center justify-end text-lg text-center text-white">
-            <Link
-              href={'#'}
-              className="rounded-lg px-2 dark:border-customDWhite border-customDLight border h-8 flex items-center justify-center w-28 text-customBrown group dark:text-customWhite "
-            >
-              Detaylar <IoIosArrowForward className="group-hover:translate-x-2 transition duration-500" size={18} />
-            </Link>
+          <div className="min-h-[200px] flex flex-col justify-between mt-4">
+            <div className="">
+              <h3 className="font-semibold text-2xl  text-customBrown dark:text-customDWhite2 line-clamp-1">
+                {post.title}
+              </h3>
+              <p className="text-xl text-customBrown2 dark:text-customDWhite2 line-clamp-4">{post.content}</p>
+            </div>
+            <div className="flex gap-2 items-center justify-end text-lg text-center text-white">
+              <DetailsButton href="#" className="" text="Detaylar" />
+            </div>
           </div>
         </div>
       ))}

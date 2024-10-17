@@ -35,14 +35,14 @@ const Navbar = () => {
   const router = useRouter();
   return (
     <Section
-      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-500 bg-customLight dark:bg-customDLight dark:text-customDWhite flex items-center h-[64px] `}
+      className={`fixed top-0  left-0 w-full z-50 transition-transform duration-500 bg-customLight dark:bg-customDLight dark:text-customDWhite flex items-center h-[64px] `}
     >
       <div className=" w-full hidden justify-between md:flex">
         <ul className="flex gap-8 font-semibold text-[20px] ">
           <li className="hover:text-customDOrange transition duration-500">
             <button onClick={() => router.push('/')}>Anasayfa</button>
           </li>
-          <li className="hover:text-customDOrange transition duration-500">
+          <li className="hover:text-customDOrange transition duration-500 ">
             <button onClick={() => scrollToSection('portfolio')}>Projeler</button>
           </li>
           <li className="hover:text-customDOrange transition duration-500">
