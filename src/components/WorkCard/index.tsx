@@ -5,6 +5,7 @@ import React from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { MdArrowOutward } from 'react-icons/md';
 import DetailsButton from '../DetailsButton';
+import Tag from '../Tag';
 
 const WorkCard = () => {
   return (
@@ -40,7 +41,13 @@ const WorkCard = () => {
               <h3 className="font-semibold text-2xl  text-customBrown dark:text-customDWhite2 line-clamp-1">
                 {post.title}
               </h3>
-              <p className="text-xl text-customBrown2 dark:text-customDWhite2 line-clamp-4">{post.content}</p>
+              <div className="gap-3 w-full flex flex-wrap mt-8 text-sm">
+                {post.tec.map((e, index) => (
+                  <Tag key={index}>{e}</Tag>
+                ))}
+              </div>
+
+              {/* <p className="text-xl text-customBrown2 dark:text-customDWhite2 line-clamp-4">{post.content}</p> */}
             </div>
             <div className="flex gap-2 items-center justify-end text-lg text-center text-white">
               <DetailsButton href="#" className="" text="Detaylar" />

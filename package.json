@@ -10,6 +10,7 @@
     "build:tailwind": "ts-node tailwind.config.ts"
   },
   "dependencies": {
+    "framer-motion": "^12.0.0-alpha.0",
     "next": "14.2.13",
     "react": "^18",
     "react-dom": "^18",
