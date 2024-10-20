@@ -17,7 +17,11 @@ const WorkCard = () => {
         >
           <div className="w-full max-h-[200px] overflow-hidden rounded-[16px] relative group">
             <div className="absolute w-full h-full bg-black opacity-0 z-10 group-hover:opacity-85 transition duration-700 ">
-              <Link className="h-full w-full flex items-center justify-center text-white text-lg " href={'/'}>
+              <Link
+                className="h-full w-full flex items-center justify-center text-white text-lg "
+                target="_blank"
+                href={'/'}
+              >
                 <span className="flex p-2 justify-center items-center gap-2 border border-white rounded-[16px] group">
                   Siteye Git <MdArrowOutward size={21} className="opacity-90" />
                 </span>
@@ -30,7 +34,7 @@ const WorkCard = () => {
               width={600}
               height={300}
               className="rounded-[16px] h-full w-[full] object-cover "
-            ></Image>
+            />
             <FaExternalLinkAlt
               className="absolute z-20 right-2 top-2 bg-black text-white bg-opacity-30 p-1 rounded-lg cursor-pointer"
               size={24}
@@ -50,7 +54,7 @@ const WorkCard = () => {
               {/* <p className="text-xl text-customBrown2 dark:text-customDWhite2 line-clamp-4">{post.content}</p> */}
             </div>
             <div className="flex gap-2 items-center justify-end text-lg text-center text-white">
-              <DetailsButton href="#" className="" text="Detaylar" />
+              <DetailsButton href={`/details/${post.id}`} className="" text="Detaylar" />
             </div>
           </div>
         </div>
