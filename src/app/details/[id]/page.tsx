@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import { IoArrowBackCircleOutline } from 'react-icons/io5';
-import { PiArrowBendRightDownBold, PiArrowElbowRightDownBold } from 'react-icons/pi';
+import { PiArrowElbowRightDownBold } from 'react-icons/pi';
 
 interface Props {
   params: {
@@ -31,7 +31,7 @@ const Details: React.FC<Props> = ({ params }) => {
   }
   return (
     <Section className="min-h-[calc(100vh-64px)] flex-wrap mt-[64px] flex bg-customLight dark:bg-customDLight dark:text-customDWhite ">
-      <div className="w-[700px] flex flex-col sm:mt-3 gap-5 mx-auto flex-wrap ">
+      <div className="w-[700px] flex flex-col sm:mt-3 gap-5 mx-auto flex-wrap">
         <span
           className="flex gap-1 text-lg items-center hover:scale-105 font-medium transition justify-start p-1 rounded-xl bg-transparent w-fit cursor-pointer group"
           onClick={() => router.back()}
