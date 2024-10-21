@@ -13,7 +13,7 @@ const WorkCard = () => {
       {projects.map((post) => (
         <div
           key={post.id}
-          className="flex flex-col bg-customWhite dark:bg-customDLight xl:max-w-[380px] 2xl:w-[90%] xl:w-[85%] lg:w-[90%] md:w-[98%] sm:w-[90%] w-full p-4 rounded-[16px] justify-between "
+          className="flex flex-col bg-customWhite dark:bg-customDLight xl:max-w-[380px] 2xl:w-[90%] xl:w-[85%] lg:w-[90%] md:w-[98%] sm:w-[90%] w-full p-4 rounded-[16px] justify-start "
         >
           <div className="w-full max-h-[200px] overflow-hidden rounded-[16px] relative group">
             <div className="absolute w-full h-full bg-black opacity-0 z-10 group-hover:opacity-85 transition duration-700 ">
@@ -40,22 +40,20 @@ const WorkCard = () => {
               size={24}
             />
           </div>
-          <div className="min-h-[200px] flex flex-col justify-between mt-4">
+          <div className="h-[180px] flex flex-col justify-between mt-4 flex-wrap gap-4 overflow-hidden">
             <div className="">
               <h3 className="font-semibold text-2xl  text-customBrown dark:text-customDWhite2 line-clamp-1">
                 {post.title}
               </h3>
-              <div className="gap-3 w-full flex flex-wrap mt-8 text-sm">
+              <div className="gap-2 w-full flex flex-wrap overflow-hidden mt-4 text-sm">
                 {post.tec.map((e, index) => (
                   <Tag key={index}>{e}</Tag>
                 ))}
               </div>
-
-              {/* <p className="text-xl text-customBrown2 dark:text-customDWhite2 line-clamp-4">{post.content}</p> */}
             </div>
-            <div className="flex gap-2 items-center justify-end text-lg text-center text-white">
-              <DetailsButton href={`/details/${post.id}`} className="" text="Detaylar" />
-            </div>
+          </div>
+          <div className="flex mt-4 items-center justify-end text-lg text-center text-white">
+            <DetailsButton href={`/details/${post.id}`} className="" text="Detaylar" />
           </div>
         </div>
       ))}

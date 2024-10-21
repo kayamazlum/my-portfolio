@@ -6,7 +6,8 @@ import ProjectsData from '@/Data/projects';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
-import { FaBackspace } from 'react-icons/fa';
+import { IoArrowBackCircleOutline } from 'react-icons/io5';
+import { PiArrowBendRightDownBold, PiArrowElbowRightDownBold } from 'react-icons/pi';
 
 interface Props {
   params: {
@@ -30,38 +31,42 @@ const Details: React.FC<Props> = ({ params }) => {
   }
   return (
     <Section className="min-h-[calc(100vh-64px)] flex-wrap mt-[64px] flex bg-customLight dark:bg-customDLight dark:text-customDWhite ">
-      <div className="w-full flex flex-col mt-3">
-        <div className="w-full flex gap-4 items-center">
-          <div className="max-h-[350px] w-[700px] overflow-hidden rounded-[16px] bg-red-300 ">
-            {project && (
-              <Image
-                src={`${project?.imageUrl}`}
-                alt="sad"
-                width={700}
-                height={350}
-                className="rounded-[16px] h-full w-[full] object-cover "
-              />
-            )}
-          </div>
-          <div className="h-full flex flex-col gap-4">
-            <span
-              className="flex gap-2 text-xl items-center hover:scale-105 font-medium transition justify-center py-1 rounded-xl bg-transparent w-36 cursor-pointer group"
-              onClick={() => router.back()}
-            >
-              <FaBackspace size={20} className=" group-hover:rotate-180 transition" /> Geri Dön
-            </span>
-            <div className="h-full flex flex-col justify-center border border-customBrown dark:border-customWhite rounded-xl p-4">
-              <SectionTitle>{project?.title}</SectionTitle>
-              <div className="flex gap-4 flex-wrap">
-                {project?.tec.map((item, index) => (
-                  <Tag key={index}>{item}</Tag>
-                ))}
-              </div>
-            </div>
+      <div className="w-[700px] flex flex-col sm:mt-3 gap-5 mx-auto flex-wrap ">
+        <span
+          className="flex gap-1 text-lg items-center hover:scale-105 font-medium transition justify-start p-1 rounded-xl bg-transparent w-fit cursor-pointer group"
+          onClick={() => router.back()}
+        >
+          <IoArrowBackCircleOutline size={28} /> Geri Dön
+        </span>
+        <div className="max-h-[350px] max-w-[700px] overflow-hidden rounded-[16px] ">
+          {project && (
+            <Image
+              src={`${project?.imageUrl}`}
+              alt="sad"
+              width={700}
+              height={350}
+              className="rounded-[16px] h-full w-[full] object-cover "
+            />
+          )}
+        </div>
+        <div className="flex flex-col ">
+          <div className="flex flex-col justify-center  rounded-xl">
+            <SectionTitle>{project?.title}</SectionTitle>
           </div>
         </div>
-        <div className="w-full flex  mt-8">
+        <div className="w-full flex">
           <p className="text-xl">{project?.content}</p>
+        </div>
+        <div className="flex flex-col gap-2">
+          <span className="text-xl font-medium flex items-center gap-2">
+            Bu Projede Neler Kullandım
+            <PiArrowElbowRightDownBold className="mt-2" size={24} />
+          </span>
+          <div className="flex gap-3 flex-wrap text-sm border-t rounded-xl border-black dark:border-white pt-4">
+            {project?.tec.map((item, index) => (
+              <Tag key={index}>{item}</Tag>
+            ))}
+          </div>
         </div>
       </div>
     </Section>

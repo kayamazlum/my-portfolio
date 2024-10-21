@@ -31,9 +31,10 @@ const ProjectsData = [
       'MongoDB',
       'TypeScript',
       'NextJS',
-      'TailwindCSS',
       'MongoDB',
       'TypeScript',
+      'NextJS',
+      'NextJS',
     ],
   },
 ];

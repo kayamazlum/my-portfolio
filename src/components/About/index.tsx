@@ -27,8 +27,8 @@ const About = () => {
         </div>
       </div>
       <div className="flex flex-col lg:w-3/5 w-full text-center sm:text-start dark:text-customDWhite2 z-10">
-        <SectionTitle>Hakkımda</SectionTitle>
-        <p className="text-2xl ">
+        <SectionTitle className="mb-4">Hakkımda</SectionTitle>
+        <p className="text-2xl">
           Ben Mazlum Kaya. Kullanıcı deneyimini ön planda tutan, modern ve işlevsel web siteleri geliştiriyorum.
         </p>
         <div className="gap-3 w-full flex flex-wrap mt-8">
