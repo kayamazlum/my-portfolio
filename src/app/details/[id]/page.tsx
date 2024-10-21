@@ -1,6 +1,5 @@
 'use client';
 import Section from '@/components/Section';
-import SectionTitle from '@/components/SectionTitle';
 import Tag from '@/components/Tag';
 import ProjectsData from '@/Data/projects';
 import Image from 'next/image';
@@ -50,19 +49,19 @@ const Details: React.FC<Props> = ({ params }) => {
           )}
         </div>
         <div className="flex flex-col ">
-          <div className="flex flex-col justify-center  rounded-xl">
-            <SectionTitle>{project?.title}</SectionTitle>
+          <div className="flex flex-col justify-center ">
+            <h1 className="sm:text-4xl text-3xl font-semibold">{project?.title}</h1>
           </div>
         </div>
         <div className="w-full flex">
-          <p className="text-xl">{project?.content}</p>
+          <p className="text-xl font-sans leading-8">{project?.content}</p>
         </div>
-        <div className="flex flex-col gap-2">
-          <span className="text-xl font-medium flex items-center gap-2">
+        <div className="flex flex-col gap-4 mt-8">
+          <span className="text-xl font-medium flex items-center gap-2 ">
             Bu Projede Neler Kullandım
             <PiArrowElbowRightDownBold className="mt-2" size={24} />
           </span>
-          <div className="flex gap-3 flex-wrap text-sm border-t rounded-xl border-black dark:border-white pt-4">
+          <div className="flex gap-3 flex-wrap text-sm border-t  border-zinc-400 dark:border-zinc-400 pt-6">
             {project?.tec.map((item, index) => (
               <Tag key={index}>{item}</Tag>
             ))}

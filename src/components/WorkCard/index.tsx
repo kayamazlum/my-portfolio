@@ -45,9 +45,12 @@ const WorkCard = () => {
               <h3 className="font-semibold text-2xl  text-customBrown dark:text-customDWhite2 line-clamp-1">
                 {post.title}
               </h3>
-              <div className="gap-2 w-full flex flex-wrap overflow-hidden mt-4 text-sm">
-                {post.tec.map((e, index) => (
-                  <Tag key={index}>{e}</Tag>
+              <p className="dark:text-customWhite text-customBrown line-clamp-4 mt-2">{post.summary}</p>
+              <div className="gap-[6px] w-full flex flex-wrap mt-4 text-sm ">
+                {post.tec.slice(0, 3).map((e, index) => (
+                  <Tag key={index} className="text-[13px]">
+                    {e}
+                  </Tag>
                 ))}
               </div>
             </div>

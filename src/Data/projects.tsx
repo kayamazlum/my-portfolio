@@ -2,6 +2,7 @@ const ProjectsData = [
   {
     id: '1',
     title: 'Coming Soon',
+    summary: 'Designed some empty state screens in kawaii style for the popular sheepify app.',
     content:
       'Designed some empty state screens in kawaii style for the popular sheepify app. A colorful dashboard to manage your fictional projects and team, all in a single place. redesigned the popular language.. A colorful dashboard to manage your fictional projects and team, all in a single place. redesigned the popular language.. A colorful dashboard to manage your fictional projects and team, all in a single place. redesigned the popular language.',
     imageUrl: 'https://gratisography.com/wp-content/uploads/2024/03/gratisography-funflower-1170x780.jpg',
@@ -10,6 +11,8 @@ const ProjectsData = [
   {
     id: '2',
     title: 'Coming Soon',
+    summary:
+      'A colorful dashboard to manage your fictional projects and team, all in a single place. Redesigned the popular language. Redesigned the popular language. Redesigned the popular language.',
     content:
       'A colorful dashboard to manage your fictional projects and team, all in a single place. redesigned the popular language. Designed some empty state screens in kawaii style for the popular sheepify app. A colorful dashboard to manage your fictional projects and team, all in a single place. redesigned the popular language.',
     imageUrl:
@@ -19,6 +22,7 @@ const ProjectsData = [
   {
     id: '3',
     title: 'Coming Soon',
+    summary: 'I redesigned the popular language learning app memrise in kawaii style to make it more cute.',
     content:
       'I redesigned the popular language learning app memrise in kawaii style to make it more cute. Designed some empty state screens in kawaii style for the popular sheepify app. A colorful dashboard to manage your fictional projects and team, all in a single place. redesigned the popular language.Designed some empty state screens in kawaii style for the popular sheepify app. A colorful dashboard to manage your fictional projects and team, all in a single place. redesigned the popular language. I redesigned the popular language learning app memrise in kawaii style to make it more cute. I redesigned the popular language learning app memrise in kawaii style to make it more cute.',
     imageUrl:
