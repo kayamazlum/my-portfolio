@@ -1,47 +1,48 @@
 const ProjectsData = [
   {
     id: '1',
-    title: 'Coming Soon',
-    summary: 'Designed some empty state screens in kawaii style for the popular sheepify app.',
+    title: 'Customer App',
+    summary: 'Kullanıcı ekleyip çıkarabileceğimiz bir uygulama',
     content:
-      'Designed some empty state screens in kawaii style for the popular sheepify app. A colorful dashboard to manage your fictional projects and team, all in a single place. redesigned the popular language.. A colorful dashboard to manage your fictional projects and team, all in a single place. redesigned the popular language.. A colorful dashboard to manage your fictional projects and team, all in a single place. redesigned the popular language.',
-    imageUrl: 'https://gratisography.com/wp-content/uploads/2024/03/gratisography-funflower-1170x780.jpg',
-    tec: ['ReactJS', 'TailwindCSS', 'TypeScript'],
+      'Bu uygulamada kullanıcı ekleyip silebiliyoruz. Fotoğraflar da kullandığım bir link üzerinden rastgele geliyor. Öğrenme sürecinde geliştirdiğim basit bir uygulama.',
+    imageUrl: '/projects/customer.png',
+    tec: ['ReactJS', 'JavaScript', 'HTML', 'CSS'],
   },
   {
     id: '2',
-    title: 'Coming Soon',
-    summary:
-      'A colorful dashboard to manage your fictional projects and team, all in a single place. Redesigned the popular language. Redesigned the popular language. Redesigned the popular language.',
+    title: 'Product App',
+    summary: 'Ürün ekleyip çıkarabildiğimiz, counter ile fiyat değiştirebileceğimiz bir uygulama',
     content:
-      'A colorful dashboard to manage your fictional projects and team, all in a single place. redesigned the popular language. Designed some empty state screens in kawaii style for the popular sheepify app. A colorful dashboard to manage your fictional projects and team, all in a single place. redesigned the popular language.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1724726561649-c94ea9057a20?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    tec: ['NextJS', 'TailwindCSS', 'MongoDB', 'TypeScript'],
+      'Bu uygulamada ürün ekleyip çıkarabiliyoruz. Ürünün fiyatını counter sayesinde değiştirebiliyoruz. Ekleme yapmak istemiyorsak "vazgeç" butonuna bastığımızda yukardaki Ekle kısmı kapanıyor. Öğrenme sürecimde geliştirdiğim basit uygulamalardan bir tanesi.',
+    imageUrl: '/projects/react-app.png',
+    tec: ['React JS', 'JavaScript', 'HTML', 'CSS'],
   },
   {
     id: '3',
-    title: 'Coming Soon',
-    summary: 'I redesigned the popular language learning app memrise in kawaii style to make it more cute.',
+    title: 'Weather App',
+    summary: 'İstenilen şehirdeki anlık hava durumunu bir api üzerinden öğrenebileceğimiz bir uygulama.',
     content:
-      'I redesigned the popular language learning app memrise in kawaii style to make it more cute. Designed some empty state screens in kawaii style for the popular sheepify app. A colorful dashboard to manage your fictional projects and team, all in a single place. redesigned the popular language.Designed some empty state screens in kawaii style for the popular sheepify app. A colorful dashboard to manage your fictional projects and team, all in a single place. redesigned the popular language. I redesigned the popular language learning app memrise in kawaii style to make it more cute. I redesigned the popular language learning app memrise in kawaii style to make it more cute.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1719937206158-cad5e6775044?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    tec: [
-      'NextJS',
-      'TailwindCSS',
-      'MongoDB',
-      'TypeScript',
-      'NextJS',
-      'TailwindCSS',
-      'MongoDB',
-      'TypeScript',
-      'NextJS',
-      'MongoDB',
-      'TypeScript',
-      'NextJS',
-      'NextJS',
-    ],
+      'Bu uygulamada aratılan şehrin anlık hava durumunu görüntüleyebiliyoruz. Bir api yardımı ile veri çekiyoruz.',
+    imageUrl: '/projects/weather.png',
+    tec: ['ReactJS', 'JavaScript', 'HTML', 'CSS'],
+  },
+  {
+    id: '4',
+    title: 'Movie App',
+    summary: 'İstenilen filmi anlık bir api üzerinden bulabileceğimiz bir uygulama.',
+    content:
+      'Bu uygulamada aratılan filmi anında görüntüleyebiliyoruz. Film hakkındaki detayları da detaylar sayfasında görüntüleyebiliyoruz. Bir api yardımı ile veri çekiyoruz.',
+    imageUrl: '/projects/movie-app.png',
+    tec: ['ReactJS', 'JavaScript', 'TailwindCSS', 'HTML', 'CSS'],
+  },
+  {
+    id: '5',
+    title: 'Netflix Clone',
+    summary: 'Bu projede Netflix sitesini klonladım.',
+    content:
+      'Bu uygulamada öncelikle giriş yapmamız gerekiyor. Burada google hesabı, github hesabı veya normal kayıt olabileceğimiz üç seçenek mevcut. Giriş yaptıktan sonra istedğimiz herhangi bir film hakkındaki detaylara ulaşabiliyor, kendi favori film listemize ekleme / çıkarma işlemleri yapabiliyoruz. İstediğimiz zaman da hesabımızdan çıkış yapabiliyoruz. Kullanıcı kayıtları için MongoDB kullandım.',
+    imageUrl: '/projects/netflix.png',
+    tec: ['ReactJS', 'MongoDB', 'TypeScript', 'Prisma', 'TailwindCSS', 'HTML', 'CSS'],
   },
 ];
 

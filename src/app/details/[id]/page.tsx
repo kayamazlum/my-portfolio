@@ -32,18 +32,18 @@ const Details: React.FC<Props> = ({ params }) => {
     <Section className="min-h-[calc(100vh-64px)] flex-wrap mt-[64px] flex bg-customLight dark:bg-customDLight dark:text-customDWhite ">
       <div className="w-[700px] flex flex-col sm:mt-3 gap-5 mx-auto flex-wrap">
         <span
-          className="flex gap-1 text-lg items-center hover:scale-105 font-medium transition justify-start p-1 rounded-xl bg-transparent w-fit cursor-pointer group"
+          className="flex gap-1 text-lg items-center hover:scale-105 font-medium transition justify-start p-1 rounded-xl bg-transparent w-fit cursor-pointer"
           onClick={() => router.back()}
         >
-          <IoArrowBackCircleOutline size={28} /> Geri Dön
+          <IoArrowBackCircleOutline size={28} /> Geri
         </span>
         <div className="max-h-[350px] max-w-[700px] overflow-hidden rounded-[16px] ">
           {project && (
             <Image
               src={`${project?.imageUrl}`}
               alt="sad"
-              width={700}
-              height={350}
+              width={1900}
+              height={920}
               className="rounded-[16px] h-full w-[full] object-cover "
             />
           )}
