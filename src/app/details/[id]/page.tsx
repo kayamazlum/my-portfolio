@@ -72,7 +72,7 @@ const Details: React.FC<Props> = ({ params }) => {
             ))}
           </div>
           <div className="mt-8">
-            <span className="font-semibold">Github Kodları: </span>
+            <span className="font-semibold">Git Reposu: </span>
             <Link href={project?.githubUrl || '#'} className="underline underline-offset-2">
               {project?.githubUrl}
             </Link>

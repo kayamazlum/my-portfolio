@@ -31,7 +31,10 @@ const About = () => {
       <div className="flex flex-col lg:w-3/5 w-full text-center sm:text-start dark:text-customDWhite2 z-10">
         <SectionTitle className="mb-4">Hakkımda</SectionTitle>
         <p className="text-2xl">
-          Ben Mazlum Kaya. Kullanıcı deneyimini ön planda tutan, modern ve işlevsel web siteleri geliştiriyorum.
+          Merhaba, ben Mazlum KAYA. Bilişim teknolojilerine küçük yaşlardan beri olan ilgim, lisede Bilişim
+          Teknolojileri-Web Tasarım ve Programlama bölümünü tercih etmemi sağladı.Bu alandaki eğitimimi ilerleterek,
+          üniversitede Yönetim Bilişim Sistemleri bölümünden mezun oldum. Şu anda Frontend teknolojileri (React JS, Next
+          JS) üzerine çalışıyorum. Kullanıcı deneyimini ön planda tutan, modern ve işlevsel web siteleri geliştiriyorum.
         </p>
         <div className="gap-3 w-full flex flex-wrap mt-8">
           {AboutSkills.map((item) => (
