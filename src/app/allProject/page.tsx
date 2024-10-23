@@ -10,7 +10,6 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import { MdArrowOutward } from 'react-icons/md';
 
 const data = ProjectsData;
-console.log('all ters data', data);
 
 const AllProject = () => {
   return (

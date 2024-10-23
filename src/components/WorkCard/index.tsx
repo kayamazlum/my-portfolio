@@ -8,7 +8,6 @@ import DetailsButton from '../DetailsButton';
 import Tag from '../Tag';
 
 const data = projects.reverse();
-console.log('tersdata', data);
 
 const WorkCard = () => {
   return (
