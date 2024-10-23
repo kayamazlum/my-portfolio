@@ -10,10 +10,12 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import { MdArrowOutward } from 'react-icons/md';
 
 const data = ProjectsData;
+console.log('all ters data', data);
+
 const AllProject = () => {
   return (
     <Section className="bg-customLight2 dark:bg-customDLight2 min-h-[calc(100vh)]">
-      <div className="mb-10 mt-16 w-full flex flex-col">
+      <div className="mb-10 mt-32 w-full flex flex-col ">
         <SectionTitle className="text-center dark:text-customDWhite">Tüm Projeler</SectionTitle>
         <div className="grid gap-y-14 grid-cols-1 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 md:gap-x-2 justify-items-center mt-20">
           {data.map((post) => (
