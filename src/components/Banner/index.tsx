@@ -1,11 +1,13 @@
 'use client';
-import scrollToSection from '@/helpers';
 import Image from 'next/image';
 import Button from '@/components//Button';
 import Section from '@/components/Section';
 import SquareArrowIcon from '@/components//SquareArrowIcon';
+import { useRouter } from 'next/navigation';
 
 const Banner = () => {
+  const router = useRouter();
+
   return (
     <Section
       id="home"
@@ -24,13 +26,13 @@ const Banner = () => {
           </div>
           <div className="gap-4 flex mt-10 flex-col sm:flex-row md:items-start items-center">
             <Button
-              onClick={() => scrollToSection('portfolio')}
+              onClick={() => router.push('/#portfolio')}
               rightIcon={<SquareArrowIcon />}
               className={'bg-customBlue text-customWhite dark:bg-customDLight2 group'}
               text="Projeler"
             />
             <Button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => router.push('/#contact')}
               className={'bg-customLight dark:bg-customDLight'}
               text="İletişime Geç"
             />

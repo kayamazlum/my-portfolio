@@ -4,11 +4,13 @@ import Section from '../Section';
 import Button from '../Button';
 import SectionTitle from '../SectionTitle';
 import Image from 'next/image';
-import scrollToSection from '@/helpers';
 import Tag from '../Tag';
 import AboutSkills from '@/Data/aboutSkills';
+import { useRouter } from 'next/navigation';
 
 const About = () => {
+  const router = useRouter();
+
   return (
     <Section
       id="about"
@@ -38,7 +40,7 @@ const About = () => {
         </div>
         <div className="gap-4 flex mt-10 flex-col sm:flex-row md:items-start items-center">
           <Button
-            onClick={() => scrollToSection('contact')}
+            onClick={() => router.push('/#contact')}
             className={'bg-customLight dark:bg-customDLight2 dark:text-customDWhite2'}
             text="İletişime Geç"
           />

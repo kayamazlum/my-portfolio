@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import Section from '../Section';
-import scrollToSection from '@/helpers';
 import { useRouter } from 'next/navigation';
 
 const Footer = () => {
@@ -15,15 +14,15 @@ const Footer = () => {
               <span onClick={() => router.push('/')}>Anasayfa</span>
             </li>
             <li className="cursor-pointer hover:underline ">
-              <span className="" onClick={() => scrollToSection('portfolio')}>
+              <span className="" onClick={() => router.push('/#portfolio')}>
                 Projeler
               </span>
             </li>
             <li className="cursor-pointer hover:underline ">
-              <span onClick={() => scrollToSection('about')}>Hakkımda</span>
+              <span onClick={() => router.push('/#about')}>Hakkımda</span>
             </li>
             <li className="cursor-pointer hover:underline ">
-              <span onClick={() => scrollToSection('contact')}>İletişim</span>
+              <span onClick={() => router.push('/#contact')}>İletişim</span>
             </li>
           </ul>
         </div>

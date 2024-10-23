@@ -1,5 +1,4 @@
 'use client';
-import scrollToSection from '@/helpers';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import { GrClose } from 'react-icons/gr';
@@ -38,7 +37,7 @@ const HamburgerMenu: React.FC<hamburgerProps> = ({ hamburger, setHamburger, dark
           <li>
             <button
               onClick={() => {
-                scrollToSection('portfolio');
+                router.push('/#portfolio');
                 setHamburger(!hamburger);
               }}
             >
@@ -48,7 +47,7 @@ const HamburgerMenu: React.FC<hamburgerProps> = ({ hamburger, setHamburger, dark
           <li>
             <button
               onClick={() => {
-                scrollToSection('about');
+                router.push('/#about');
                 setHamburger(!hamburger);
               }}
             >
@@ -58,7 +57,7 @@ const HamburgerMenu: React.FC<hamburgerProps> = ({ hamburger, setHamburger, dark
           <li>
             <button
               onClick={() => {
-                scrollToSection('contact');
+                router.push('/#contact');
                 setHamburger(!hamburger);
               }}
             >

@@ -1,5 +1,4 @@
 'use client';
-import scrollToSection from '@/helpers';
 import { useState, useEffect } from 'react';
 import { MdLightMode, MdNightlight } from 'react-icons/md';
 import Section from '@/components/Section';
@@ -43,13 +42,13 @@ const Navbar = () => {
             <button onClick={() => router.push('/')}>Anasayfa</button>
           </li>
           <li className="hover:text-customDOrange transition duration-500 ">
-            <button onClick={() => scrollToSection('portfolio')}>Projeler</button>
+            <button onClick={() => router.push('/#portfolio')}>Projeler</button>
           </li>
           <li className="hover:text-customDOrange transition duration-500">
-            <button onClick={() => scrollToSection('about')}>Hakkımda</button>
+            <button onClick={() => router.push('/#about')}>Hakkımda</button>
           </li>
           <li className="hover:text-customDOrange transition duration-500">
-            <button onClick={() => scrollToSection('contact')}>İletişim</button>
+            <button onClick={() => router.push('/#contact')}>İletişim</button>
           </li>
         </ul>
         {darkMode ? (
