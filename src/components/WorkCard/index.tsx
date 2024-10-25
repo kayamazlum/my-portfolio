@@ -17,7 +17,7 @@ const WorkCard = () => {
           key={post.id}
           className="flex flex-col bg-customWhite dark:bg-customDLight xl:max-w-[380px] 2xl:w-[90%] xl:w-[85%] lg:w-[90%] md:w-[98%] sm:w-[90%] w-full p-4 rounded-[16px] justify-start "
         >
-          <div className="w-full sm:h-[240px] md:h-[200px] h-[200px] overflow-hidden rounded-[16px] relative group">
+          <div className="w-full sm:h-[240px] md:h-[200px] h-[200px] overflow-hidden rounded-[16px] relative group ">
             {post.siteUrl !== '' && (
               <div className="absolute w-full h-full bg-black opacity-0 z-10 group-hover:opacity-85 transition duration-700 ">
                 <Link
@@ -37,7 +37,7 @@ const WorkCard = () => {
               priority
               width={600}
               height={300}
-              className="rounded-[16px] h-full w-[full] object-cover "
+              className="rounded-[16px] h-full w-[full] object-cover"
             />
             {post.siteUrl !== '' && (
               <FaExternalLinkAlt

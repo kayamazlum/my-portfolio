@@ -15,7 +15,6 @@ const About = () => {
     'Merhaba, ben Mazlum KAYA. Bilişim teknolojilerine küçük yaşlardan beri olan ilgim, lisede Bilişim Teknolojileri-Web Tasarım ve Programlama bölümünü tercih etmemi sağladı.Bu alandaki eğitimimi ilerleterek, üniversitede Yönetim Bilişim Sistemleri bölümünden mezun oldum. Şu anda Frontend teknolojileri (React JS, NextJS) üzerine çalışıyorum. Kullanıcı deneyimini ön planda tutan, modern ve işlevsel web siteleri geliştiriyorum.';
 
   const [devami, setDevami] = useState(false);
-
   const changeAboutText = (t: string) => {
     return t.slice(0, 240);
   };
@@ -40,7 +39,6 @@ const About = () => {
       <div className="flex flex-col lg:w-3/5 w-full text-center sm:text-start dark:text-customDWhite2 z-10">
         <SectionTitle className="mb-4">Hakkımda</SectionTitle>
         <p className="text-2xl">
-          {' '}
           {!devami ? changeAboutText(aboutText) : aboutText}
           <span onClick={() => setDevami(!devami)} className="font-semibold cursor-pointer text-2xl">
             {!devami ? '..daha fazla' : '..daha az'}
