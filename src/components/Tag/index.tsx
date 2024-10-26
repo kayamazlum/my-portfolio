@@ -7,7 +7,7 @@ interface tagProps {
 const Tag: React.FC<tagProps> = ({ children, className }) => {
   return (
     <span
-      className={`px-2 py-[2px] bg-customLight2 dark:bg-customDBrown dark:text-white rounded-xl cursor-pointer transition hover:scale-105 select-none ${className}`}
+      className={`px-2 py-[2px] bg-customLight2 dark:bg-customDBrown dark:text-white rounded-xl cursor-pointer transition  hover:shadow-lg hover:shadow-zinc-500  select-none ${className}`}
     >
       {children}
     </span>
