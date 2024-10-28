@@ -12,7 +12,7 @@ const About = () => {
   const router = useRouter();
 
   const aboutText: string =
-    'Merhaba, ben Mazlum KAYA. Bilişim teknolojilerine küçük yaşlardan beri olan ilgim, lisede Bilişim Teknolojileri-Web Tasarım ve Programlama bölümünü tercih etmemi sağladı.Bu alandaki eğitimimi ilerleterek, üniversitede Yönetim Bilişim Sistemleri bölümünden mezun oldum. Şu anda Frontend teknolojileri (React JS, NextJS) üzerine çalışıyorum. Kullanıcı deneyimini ön planda tutan, modern ve işlevsel web siteleri geliştiriyorum.';
+    'Merhaba, ben Mazlum KAYA. Bilişim teknolojilerine küçük yaşlardan beri olan ilgim, lisede Bilişim Teknolojileri-Web Tasarım ve Programlama bölümünü tercih etmemi sağladı.Bu alandaki eğitimimi ilerleterek, üniversitede Yönetim Bilişim Sistemleri bölümünden mezun oldum. Şu anda Frontend teknolojileri (ReactJS, NextJS) üzerine çalışıyorum. Kullanıcı deneyimini ön planda tutan, modern ve işlevsel web siteleri geliştiriyorum.';
 
   const [devami, setDevami] = useState(false);
   const changeAboutText = (t: string) => {
