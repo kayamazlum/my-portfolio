@@ -32,6 +32,17 @@ const ProjectsData = [
     githubUrl: 'https://github.com/kayamazlum/netflix-clone',
     siteUrl: '',
   },
+  {
+    id: '4',
+    title: 'Todo App',
+    summary: 'Bu projede full stack bir Todo uygulaması yaptım',
+    content:
+      'Bu projede, CRUD işlemlerini içeren bir full-stack Todo uygulaması geliştirdim. Uygulama, kullanıcıların görev ekleme, silme, güncelleme ve listeleme işlemlerini gerçekleştirmesine olanak tanır. Ayrıca, seçilen bir görevin detaylarını görüntüleyebilme özelliğine sahiptir.',
+    imageUrl: '/projects/todo-app.png',
+    tec: ['NextJS', 'NodeJS', 'MongoDB', 'TailwindCSS', 'HTML', 'CSS'],
+    githubUrl: 'https://github.com/kayamazlum/Todo-App',
+    siteUrl: '',
+  },
 ];
 
 export default ProjectsData;

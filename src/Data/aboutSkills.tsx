@@ -23,5 +23,13 @@ const AboutSkills = [
     id: '6',
     text: 'TailwindCSS',
   },
+  {
+    id: '7',
+    text: 'NodeJS',
+  },
+  {
+    id: '8',
+    text: 'MongoDB',
+  },
 ];
 export default AboutSkills;
