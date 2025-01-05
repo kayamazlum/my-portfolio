@@ -10,11 +10,13 @@
     "build:tailwind": "ts-node tailwind.config.ts"
   },
   "dependencies": {
+    "axios": "^1.7.9",
     "framer-motion": "^12.0.0-alpha.0",
     "next": "14.2.13",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.3.0",
+    "swiper": "^11.2.0",
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
