@@ -1,43 +1,32 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { MdArrowOutward } from 'react-icons/md';
 import DetailsButton from '../DetailsButton';
 import Tag from '../Tag';
 import { appConfig } from '@/config';
 import { IProjectItem } from '@/models/projects';
-import { getAllProjectsServices } from '@/services/projects';
 
-const WorkCard = () => {
-  const [proje, setProje] = useState<IProjectItem[]>([]);
+interface IWorkCardProps {
+  allProjects: IProjectItem[];
+}
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const projectsData = await getAllProjectsServices();
-      console.log('Project Data', projectsData);
-      if (projectsData?.data.projects.length > 0) {
-        setProje(projectsData?.data.projects);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  if (proje.length <= 0) {
+const WorkCard = ({ allProjects }: IWorkCardProps) => {
+  if (allProjects.length <= 0) {
     return <p>Veri bulunamadı!</p>;
   }
 
   return (
     <>
-      {proje.slice(0, 3).map((post) => (
+      {allProjects.slice(0, 3).map((project) => (
         <div
-          key={post._id}
+          key={project._id}
           className="flex flex-col bg-customWhite dark:bg-customDLight xl:max-w-[380px] 2xl:w-[90%] xl:w-[85%] lg:w-[90%] md:w-[98%] sm:w-[90%] w-full p-4 rounded-[16px] justify-start "
         >
           <div className="w-full sm:h-[240px] md:h-[200px] h-[200px] overflow-hidden rounded-[16px] relative group ">
-            {post.site_url !== '' && (
+            {project.site_url !== '' && (
               <div className="absolute w-full h-full bg-black opacity-0 z-10 group-hover:opacity-85 transition duration-700 ">
                 <Link
                   className="h-full w-full flex items-center justify-center text-white text-lg "
@@ -51,14 +40,14 @@ const WorkCard = () => {
               </div>
             )}
             <Image
-              src={`${appConfig.baseUrl}${post.image_url[0]}`}
+              src={`${appConfig.baseUrl}${project.image_url[0]}`}
               alt="sad"
               priority
               width={600}
               height={300}
               className="rounded-[16px] h-full w-[full] object-cover"
             />
-            {post.site_url !== '' && (
+            {project.site_url !== '' && (
               <FaExternalLinkAlt
                 className="absolute z-20 right-2 top-2 bg-black text-white bg-opacity-30 p-1 rounded-lg cursor-pointer"
                 size={24}
@@ -68,11 +57,11 @@ const WorkCard = () => {
           <div className="h-[180px] flex flex-col justify-between mt-4 flex-wrap gap-4 overflow-hidden">
             <div className="">
               <h3 className="font-semibold text-2xl  text-customBrown dark:text-customDWhite2 line-clamp-1">
-                {post.title}
+                {project.title}
               </h3>
-              <p className="dark:text-customWhite text-customBrown line-clamp-4 mt-2">{post.summary}</p>
+              <p className="dark:text-customWhite text-customBrown line-clamp-4 mt-2">{project.summary}</p>
               <div className="gap-[6px] w-full flex flex-wrap mt-4 text-sm ">
-                {post.skills.slice(0, 3).map((skill, index) => (
+                {project.skills.slice(0, 3).map((skill, index) => (
                   <Tag key={index} className="text-[13px]">
                     {skill}
                   </Tag>
@@ -81,7 +70,7 @@ const WorkCard = () => {
             </div>
           </div>
           <div className="flex mt-4 items-center justify-end text-lg text-center text-white">
-            <DetailsButton href={`/details/${post._id}`} className="" text="Detaylar" />
+            <DetailsButton href={`/details/${project._id}`} className="" text="Detaylar" />
           </div>
         </div>
       ))}
