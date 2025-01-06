@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import { IoArrowBackCircleOutline } from 'react-icons/io5';
 import { PiArrowElbowRightDownBold } from 'react-icons/pi';
-import { Navigation, Pagination, Scrollbar, A11y, Zoom, Mousewheel } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, Zoom, Mousewheel, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
@@ -69,9 +69,10 @@ const Details: React.FC<Props> = ({ params }) => {
 
         <div className="max-h-[400px] w-[100%] flex justify-center">
           <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y, Zoom, Mousewheel]}
+            modules={[Navigation, Pagination, Scrollbar, A11y, Zoom, Mousewheel, Autoplay]}
             spaceBetween={50}
             slidesPerView={1}
+            autoplay={{ delay: 6000 }}
             navigation
             zoom={{ maxRatio: 3, minRatio: 1 }}
             mousewheel
@@ -82,15 +83,17 @@ const Details: React.FC<Props> = ({ params }) => {
           >
             {project?.image_url.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className="max-h-[400px] max-w-[700px] overflow-hidden rounded-[16px] flex justify-center ">
-                  <Image
-                    src={`${appConfig.baseUrl}${item}`}
-                    alt="Project Image"
-                    width={1900}
-                    height={920}
-                    className="rounded-[16px] h-full w-full object-cover"
-                    priority
-                  />
+                <div className="sm:h-[360px] md:h-[400px] h-[250px] w-full overflow-hidden rounded-[16px] flex justify-center ">
+                  <Link href={`${appConfig.baseUrl}${item}`} target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src={`${appConfig.baseUrl}${item}`}
+                      alt="Project Image"
+                      width={1900}
+                      height={920}
+                      className="rounded-[16px] h-full w-full object-cover"
+                      priority
+                    />
+                  </Link>
                 </div>
               </SwiperSlide>
             ))}
