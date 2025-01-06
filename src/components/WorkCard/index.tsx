@@ -49,8 +49,8 @@ const WorkCard = ({ allProjects }: IWorkCardProps) => {
             />
             {project.site_url !== '' && (
               <FaExternalLinkAlt
-                className="absolute z-20 right-2 top-2 bg-black text-white bg-opacity-30 p-1 rounded-lg cursor-pointer"
-                size={24}
+                className="absolute z-20 right-2 top-2 bg-black text-white bg-opacity-70 p-1 rounded-lg cursor-pointer"
+                size={27}
               />
             )}
           </div>

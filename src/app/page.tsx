@@ -36,6 +36,7 @@ import About from '@/components/About';
 import Banner from '@/components/Banner';
 import Contact from '@/components/Contact';
 import Portfolio from '@/components/Portfolio';
+import WorkCard from '@/components/WorkCard';
 import { IProjectItem } from '@/models/projects';
 import { getAllProjectsServices } from '@/services/projects';
 
@@ -48,7 +49,9 @@ export default async function Home() {
   return (
     <div className="bg-customLight mx-auto">
       <Banner />
-      <Portfolio allProjects={allProjects} />
+      <Portfolio title={'Projeler'}>
+        <WorkCard allProjects={allProjects} />
+      </Portfolio>
       <About />
       <Contact />
     </div>

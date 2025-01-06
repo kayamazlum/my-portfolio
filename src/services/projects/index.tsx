@@ -5,7 +5,7 @@ export const getAllProjectsServices = async () => {
   return data;
 };
 
-// export const getProjectDetailServices = async (_id: string) => {
-//   const data = apiInstance.get(`/get-projects/${_id}`);
-//   return data;
-// };
+export const getProjectDetailsServices = async (_id: string) => {
+  const data = apiInstance.get(`/details-project?_id=${_id}`);
+  return data;
+};
