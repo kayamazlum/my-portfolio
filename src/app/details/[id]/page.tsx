@@ -19,6 +19,7 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/zoom';
 import 'swiper/css/mousewheel';
 import { appConfig } from '@/config';
+import Loading from '@/components/Loading';
 
 interface Props {
   params: {
@@ -30,7 +31,6 @@ const Details: React.FC<Props> = ({ params }) => {
   const router = useRouter();
   const [project, setProject] = useState<IProjectItem | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
-  console.log(params.id);
 
   useEffect(() => {
     const fetchProject = async () => {
@@ -50,7 +50,7 @@ const Details: React.FC<Props> = ({ params }) => {
   }, [params.id]);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
 
   if (!project) {
