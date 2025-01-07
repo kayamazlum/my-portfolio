@@ -10,3 +10,14 @@ export interface IProjectItem {
   created_at: string;
   updated_at: string;
 }
+
+export interface IHeroItem {
+  _id: string;
+  hero_text: string;
+}
+
+export interface IAboutItem {
+  _id: string;
+  about_text: string;
+  about_skills: string[];
+}

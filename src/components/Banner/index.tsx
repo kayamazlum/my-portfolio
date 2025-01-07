@@ -1,12 +1,31 @@
 'use client';
 import Image from 'next/image';
-import Button from '@/components//Button';
+import Button from '@/components/Button';
 import Section from '@/components/Section';
-import SquareArrowIcon from '@/components//SquareArrowIcon';
+import SquareArrowIcon from '@/components/SquareArrowIcon';
 import { useRouter } from 'next/navigation';
+import { getHeroServices } from '@/services/hero';
+import { useEffect, useState } from 'react';
+import { IHeroItem } from '@/models/projects';
 
 const Banner = () => {
   const router = useRouter();
+
+  const [hero, setHero] = useState<IHeroItem | null>(null);
+  const getData = async () => {
+    try {
+      const res = await getHeroServices();
+      const heroData = res?.data?.heroData || [];
+      setHero(heroData[0] || null);
+    } catch (error) {
+      console.error('Error fetching hero data:', error);
+      setHero(null);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <Section
@@ -20,10 +39,9 @@ const Banner = () => {
             <span className="text-2xl m-0 p-0 ">👋</span>Selam!
           </div>
           <div className="text-[2.5rem] sm:text-[3.2rem] leading-tight font-semibold ">
-            Ben Mazlum, İhtiyaçlarınıza Uygun,
-            <br />
-            Hızlı ve Etkileyici Web Siteleri Geliştirebilirim.
+            {hero ? hero.hero_text : 'Yükleniyor...'}
           </div>
+
           <div className="gap-4 flex mt-10 flex-col sm:flex-row md:items-start items-center">
             <Button
               onClick={() => router.push('/#portfolio')}
