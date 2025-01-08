@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 import { getHeroServices } from '@/services/hero';
 import { useEffect, useState } from 'react';
 import { IHeroItem } from '@/models/projects';
+import Loading from '../Loading';
 
 const Banner = () => {
   const router = useRouter();
@@ -39,7 +40,7 @@ const Banner = () => {
             <span className="text-2xl m-0 p-0 ">👋</span>Selam!
           </div>
           <div className="text-[2.5rem] sm:text-[3.2rem] leading-tight font-semibold ">
-            {hero ? hero.hero_text : 'Yükleniyor...'}
+            {hero ? hero.hero_text : <Loading />}
           </div>
 
           <div className="gap-4 flex mt-10 flex-col sm:flex-row md:items-start items-center">

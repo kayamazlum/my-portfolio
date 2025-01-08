@@ -27,7 +27,6 @@ const About = () => {
   useEffect(() => {
     getData();
   }, []);
-  console.log(about);
 
   const [devami, setDevami] = useState(false);
   const changeAboutText = (t: string) => {
