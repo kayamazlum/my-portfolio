@@ -43,6 +43,17 @@ const ProjectsData = [
     githubUrl: 'https://github.com/kayamazlum/Todo-App',
     siteUrl: '',
   },
+  {
+    id: '5',
+    title: 'Portfolio Admin',
+    summary: 'Bu projede portfolyo sitem için bir backend ve admin paneli yaptım.',
+    content:
+      'Bu projede, mevcutta var olan portfolyo sitem için Next js ile bir admin paneli, Node js ile de bir backend yazdım. Veritabanı olarak MongoDB kullandım. Admin paneline giriş yapmak kullanıcı adı ve şifre adımından geçiyoruz. Bu adımdan sonra sitemizdeki projelerimiz, hero kısmı ve about kısmı için CRUD (güncelleme, silme, ekleme, listeleme) işlemleri yapabiliyoruz. Son olarak giriş yaptığımız hesaptan çıkış yapma seçeneği de sundum.',
+    imageUrl: '/projects/admin.png',
+    tec: ['NextJS', 'NodeJS', 'MongoDB', 'TailwindCSS', 'HTML', 'CSS'],
+    githubUrl: 'https://github.com/kayamazlum/my-portfolio-admin , https://github.com/kayamazlum/my-portfolio-backend',
+    siteUrl: '',
+  },
 ];
 
 export default ProjectsData;
