@@ -73,9 +73,14 @@ const Details: React.FC<Props> = ({ params }) => {
           </div>
           <div className="mt-8">
             <span className="font-semibold">Git Reposu: </span>
-            <Link href={project?.githubUrl || '#'} className="underline underline-offset-2">
-              {project?.githubUrl}
-            </Link>
+            {project?.githubUrl &&
+              project.githubUrl.split(',').map((url, index) => (
+                <div key={index} className="mt-2">
+                  <Link href={url.trim()} className="underline underline-offset-2">
+                    {url.trim()}
+                  </Link>
+                </div>
+              ))}
           </div>
         </div>
       </div>
