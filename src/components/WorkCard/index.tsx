@@ -60,9 +60,9 @@ const WorkCard = ({ allProjects }: IWorkCardProps) => {
                 {project.title}
               </h3>
               <p className="dark:text-customWhite text-customBrown line-clamp-4 mt-2">{project.summary}</p>
-              <div className="gap-[6px] w-full flex flex-wrap mt-4 text-sm ">
+              <div className="gap-[6px] w-full flex flex-wrap mt-4 ">
                 {project.skills.slice(0, 3).map((skill, index) => (
-                  <Tag key={index} className="text-[13px]">
+                  <Tag key={index} className="text-[16px]">
                     {skill}
                   </Tag>
                 ))}
