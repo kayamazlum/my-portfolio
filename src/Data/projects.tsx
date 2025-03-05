@@ -54,6 +54,17 @@ const ProjectsData = [
     githubUrl: 'https://github.com/kayamazlum/my-portfolio-admin , https://github.com/kayamazlum/my-portfolio-backend',
     siteUrl: '',
   },
+  {
+    id: '6',
+    title: 'Travel App',
+    summary: 'Bu projede bir seyahat sitesi demosunu yaptım.',
+    content:
+      'Bu projede, bir responsive seyahat sitesi geliştirdim. Bu projede slider için react-multi-carousel, efektler için de AOS kütüphanelerini kullandım. Projeyi tek sayfadan oluşan bir demo gibi düşünebiliriz.',
+    imageUrl: '/projects/travelapp.png',
+    tec: ['NextJS', 'TailwindCSS', 'Typescript', 'HTML', 'CSS'],
+    githubUrl: 'https://github.com/kayamazlum/Travel-App',
+    siteUrl: 'https://travel-app-xi-brown.vercel.app/',
+  },
 ];
 
 export default ProjectsData;

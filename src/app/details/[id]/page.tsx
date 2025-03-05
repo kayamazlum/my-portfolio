@@ -24,6 +24,7 @@ const Details: React.FC<Props> = ({ params }) => {
     imageUrl: string;
     tec: string[];
     githubUrl: string;
+    siteUrl?: string;
   } | null>(null);
 
   useEffect(() => {
@@ -81,6 +82,20 @@ const Details: React.FC<Props> = ({ params }) => {
                   </Link>
                 </div>
               ))}
+          </div>
+          <div>
+            {project?.siteUrl ? (
+              project.siteUrl.split(',').map((url, index) => (
+                <div key={index} className="mt-2 flex flex-col">
+                  <span className="font-semibold">Site Linki: </span>
+                  <Link href={url.trim()} className="underline underline-offset-2 mt-1">
+                    {url.trim()}
+                  </Link>
+                </div>
+              ))
+            ) : (
+              <div></div>
+            )}
           </div>
         </div>
       </div>

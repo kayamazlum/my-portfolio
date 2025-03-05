@@ -23,7 +23,7 @@ const WorkCard = () => {
                 <Link
                   className="h-full w-full flex items-center justify-center text-white text-lg "
                   target="_blank"
-                  href={'/'}
+                  href={post.siteUrl}
                 >
                   <span className="flex p-2 justify-center items-center gap-2 border border-white rounded-[16px] group">
                     Siteye Git <MdArrowOutward size={21} className="opacity-90" />
